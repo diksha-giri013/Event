@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="fgc.amitech.OnBoarding">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_intro"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_alignParentStart="true"
+        android:background="@color/colorPrimaryDark" />
+
+
+   <!-- <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/sliderDots"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignEnd="@id/vp_intro"
+        android:layout_marginTop="300dp"
+        android:gravity="center_vertical|center_horizontal">-->
+    <Button
+        android:id="@+id/skip_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:background="@null"
+        android:text="SKIP"
+        android:onClick="obClick"
+       />
+
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:background="@null"
+        android:text="NEXT"
+        android:onClick="obClick"/>
+
+    <Button
+        android:id="@+id/previous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@null"
+        android:text="PREVIOUS"
+        android:visibility="invisible"
+        android:onClick="obClick"
+        />
+
+    <com.rd.PageIndicatorView
+        android:id="@+id/pageIndicatorView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/next"
+        android:layout_centerHorizontal="true"
+        app:piv_animationType="drop"
+        app:piv_interactiveAnimation="true"
+        app:piv_padding="12dp"
+        app:piv_radius="9dp"
+        app:piv_selectedColor="#ffffff"
+        app:piv_unselectedColor="#919191"
+        app:piv_viewPager="@id/vp_intro" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/imageButton2"
+        android:background="@null"
+        app:srcCompat="@drawable/ic_navigate_next"
+        android:onClick="obClick"/>
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:visibility="invisible"
+        android:background="@null"
+        android:onClick="obClick"
+        />
+
+
+
+    <!--
+    android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+     <LinearLayout
+      <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/sliderDots"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       android:layout_alignEnd="@id/vp_intro"
+        android:layout_marginTop="300dp"
+        android:gravity="center_vertical|center_horizontal">
+        android:orientation="horizontal"
+        android:id="@+id/sliderDots"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       android:layout_alignEnd="@id/vp_intro"
+        android:layout_marginTop="300dp"
+        android:gravity="center_vertical|center_horizontal">
+     </LinearLayout>
+    attrs:piv_padding="12dp"
+    attrs:piv_radius="8dp"
+    <ImageView
+        android:id="@+id/onb_iv_indi1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:srcCompat="@drawable/ic_crop_square_black_24dp"
+        />
+
+    <ImageView
+        android:id="@+id/onb_iv_indi2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_crop_square_black_24dp"
+        android:layout_margin="5dp"/>
+
+    <ImageView
+        android:id="@+id/onb_iv_indi3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_crop_square_black_24dp"
+        android:layout_margin="5dp"/></LinearLayout>-->
+
+
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignEnd="@id/vp_intro"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="300dp"
+        >
+
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-65dp"
+            android:layout_marginTop="5dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/ic_asset_3" />
+    </LinearLayout>-->
+
+</RelativeLayout>
