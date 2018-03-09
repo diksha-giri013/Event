@@ -50,8 +50,6 @@ private int mCurrentPage;
         final Button previous=(Button) findViewById(R.id.previous);
         final Button next=(Button) findViewById(R.id.next);
 
-        //final ImageButton navigate=(ImageButton) findViewById(R.id.imageButton);
-        final ImageButton back=(ImageButton) findViewById(R.id.imageButton2);
         /*skip.setOnClickListener(new View.OnClickListener() {
         @Override
          public void onClick(View view) {
@@ -94,18 +92,12 @@ private int mCurrentPage;
                     //navigate.setEnabled(true);
                     previous.setEnabled(false);
                     previous.setVisibility(View.INVISIBLE);
-                    back.setEnabled(false);
-                    back.setVisibility(View.INVISIBLE);
                     next.setText("NEXT");
 
                 }
                 else if(position==2){
                     previous.setEnabled(true);
-                    back.setEnabled(true);
-                    back.setVisibility(View.VISIBLE);
                     previous.setVisibility(View.VISIBLE);
-
-                    back.setImageDrawable(getDrawable(R.drawable.ic_navigate_before));
                     next.setText("FINISH");
                 }
                 else
@@ -114,9 +106,6 @@ private int mCurrentPage;
                     //navigate.setEnabled(true);
                     previous.setEnabled(true);
                     previous.setVisibility(View.VISIBLE);
-                    back.setEnabled(true);
-                    back.setVisibility(View.VISIBLE);
-                    back.setImageDrawable(getDrawable(R.drawable.ic_navigate_before));
                     //navigate.setImageDrawable(getDrawable(R.drawable.ic_navigate_next));
                     next.setText("NEXT");
 
