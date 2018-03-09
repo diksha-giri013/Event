@@ -65,9 +65,9 @@ class AdapterForView extends PagerAdapter{
         text1.setText(heading[position]);
         TextView text2=(TextView) view.findViewById(R.id.ob_vp_tv_stat);
         text2.setText(number_text[position]);
-        TextView text3=(TextView) view.findViewById(R.id.textView3);
+        TextView text3=(TextView) view.findViewById(R.id.ob_vp_tv_subtitle);
         text3.setText(number_text2[position]);
-        TextView text4=(TextView) view.findViewById(R.id.textView4);
+        TextView text4=(TextView) view.findViewById(R.id.ob_vp_tv_desc);
         text4.setText(list_text[position]);
 
        // ImageView spaceshipImage = (ImageView)view.findViewById(R.id.image);
