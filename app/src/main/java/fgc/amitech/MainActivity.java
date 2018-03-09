@@ -17,13 +17,14 @@ List<event> eventList;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-RecyclerView rv=(RecyclerView)findViewById(R.id.mainRecycle);
-rv.setHasFixedSize(true);
-layoutManager=new LinearLayoutManager(this);
-rv.setLayoutManager(layoutManager);
+        RecyclerView rv=(RecyclerView)findViewById(R.id.mainRecycle);
+        rv.setHasFixedSize(true);
+        layoutManager=new LinearLayoutManager(this);
+        rv.setLayoutManager(layoutManager);
 //ContentAdapter adapter=new ContentAdapter(rv.getContext(),eventList);
 
     }}

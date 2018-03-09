@@ -129,7 +129,7 @@ private int mCurrentPage;
                     if(viewPager.getCurrentItem()==0)viewPager.setCurrentItem(1);
                 else if(viewPager.getCurrentItem()==1)viewPager.setCurrentItem(2);
                     else{ Intent i=new Intent(getApplicationContext(),MainActivity.class);
-                        startActivity(i);}break;
+                        startActivity(i); finish(); }break;
 
             case R.id.previous:
                  if(viewPager.getCurrentItem()==1)viewPager.setCurrentItem(0);
