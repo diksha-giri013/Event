@@ -22,9 +22,9 @@ class AdapterForView extends PagerAdapter{
     private Context mCtx;
     private LayoutInflater layoutInflater;
     public String[] heading={
-            "PARTICIPATE AND WIN EXCITING GOODIES",
-            "TWO LINER HIGHLIGHTING TEXT ",
-            "2 LINER HIGHLIGHTING TEXT"
+            "Participate And Win Exciting Goodies",
+            "Two Liner Highlight Text",
+            "Two Liner Highlight Text"
     };
     public String[] number_text={
             "50+",
@@ -37,9 +37,9 @@ class AdapterForView extends PagerAdapter{
             "AnyThing"
     };
     public String[] list_text={
-            "hyped and glorified ",
-            "hype and glory",
-            "hype and glory!!"
+            "Enjoy to your fullest while gaining creative intellect by being a part of them!",
+            "Enjoy to your fullest while gaining creative intellect by being a part of them!",
+            "Enjoy to your fullest while gaining creative intellect by being a part of them!"
     };
     public AdapterForView(Context mCtx) {
     this.mCtx=mCtx;
@@ -61,9 +61,9 @@ class AdapterForView extends PagerAdapter{
         layoutInflater=(LayoutInflater)mCtx.getSystemService(mCtx.LAYOUT_INFLATER_SERVICE);
         View view=layoutInflater.inflate(R.layout.card,container,false);
 
-        TextView text1=(TextView) view.findViewById(R.id.textView1);
+        TextView text1=(TextView) view.findViewById(R.id.ob_vp_tv_header);
         text1.setText(heading[position]);
-        TextView text2=(TextView) view.findViewById(R.id.textView2);
+        TextView text2=(TextView) view.findViewById(R.id.ob_vp_tv_stat);
         text2.setText(number_text[position]);
         TextView text3=(TextView) view.findViewById(R.id.textView3);
         text3.setText(number_text2[position]);

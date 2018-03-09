@@ -7,6 +7,7 @@ import android.os.Handler;
 import android.support.graphics.drawable.AnimatedVectorDrawableCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.WindowManager;
 import android.widget.ImageView;
 
 public class SplashScreen extends AppCompatActivity {
@@ -17,6 +18,8 @@ AnimatedVectorDrawable avd;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         //ImageView myAnimation = findViewById(R.id.aniImage);
         //avd = (AnimatedVectorDrawable)myAnimation.getDrawable();
         //new Handler().postDelayed(new Runnable() {

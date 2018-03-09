@@ -11,9 +11,8 @@
         android:id="@+id/vp_intro"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
         android:layout_alignParentStart="true"
-        android:background="@color/colorPrimaryDark" />
+        android:background="@drawable/onboard_back" />
 
 
    <!-- <LinearLayout
@@ -31,9 +30,11 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
         android:background="@null"
-        android:text="SKIP"
+        android:fontFamily="@font/open_sans_light"
         android:onClick="obClick"
-       />
+        android:text="Skip"
+        android:textColor="#fff"
+        android:textSize="@dimen/btn_text" />
 
 
     <Button
@@ -43,8 +44,10 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:background="@null"
-        android:text="NEXT"
-        android:onClick="obClick"/>
+        android:fontFamily="@font/open_sans"
+        android:onClick="obClick"
+        android:text="Next"
+        android:textColor="#fff" />
 
     <Button
         android:id="@+id/previous"
@@ -53,10 +56,11 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:background="@null"
-        android:text="PREVIOUS"
-        android:visibility="invisible"
+        android:fontFamily="@font/open_sans"
         android:onClick="obClick"
-        />
+        android:text="PREVIOUS"
+        android:textColor="#fff"
+        android:visibility="invisible" />
 
     <com.rd.PageIndicatorView
         android:id="@+id/pageIndicatorView"
@@ -68,31 +72,9 @@
         app:piv_interactiveAnimation="true"
         app:piv_padding="12dp"
         app:piv_radius="9dp"
-        app:piv_selectedColor="#ffffff"
-        app:piv_unselectedColor="#919191"
+        app:piv_selectedColor="#F50057"
+        app:piv_unselectedColor="#e6e6e6"
         app:piv_viewPager="@id/vp_intro" />
-
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/imageButton2"
-        android:background="@null"
-        app:srcCompat="@drawable/ic_navigate_next"
-        android:onClick="obClick"/>
-
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_centerVertical="true"
-        android:visibility="invisible"
-        android:background="@null"
-        android:onClick="obClick"
-        />
-
 
 
     <!--

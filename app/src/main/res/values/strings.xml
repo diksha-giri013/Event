@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Amitech</string>
     <string name="title_activity_main">MainActivity</string>
+    <string name="event_description">Welcome to the world of logical reasoning and brilliant articulation.
+        Leave your mark as the best debater and critical thinker.</string>
+    <string name="event_rules">Rules are very important for any event read them.
+    \nEach member can present one argument.
+    \nCross questioning is not allowed, chill life.
+    \nBring your own pen and paper.</string>
 </resources>

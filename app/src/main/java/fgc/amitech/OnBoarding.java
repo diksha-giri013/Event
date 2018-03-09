@@ -3,11 +3,14 @@ package fgc.amitech;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Rect;
+import android.service.notification.StatusBarNotification;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -31,6 +34,9 @@ private int mCurrentPage;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_on_boarding);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         viewPager=(ViewPager)findViewById(R.id.vp_intro);
         //sliderDotsPanel=findViewById(R.id.sliderDots);
         final PageIndicatorView pageIndicatorView = findViewById(R.id.pageIndicatorView);
@@ -38,12 +44,13 @@ private int mCurrentPage;
 
         adapterForView=new AdapterForView(this);
         viewPager.setPageTransformer(true,new DepthPageTransformer());
+
         viewPager.setAdapter(adapterForView);
         Button skip=(Button) findViewById(R.id.skip_button);
         final Button previous=(Button) findViewById(R.id.previous);
         final Button next=(Button) findViewById(R.id.next);
 
-        final ImageButton navigate=(ImageButton) findViewById(R.id.imageButton);
+        //final ImageButton navigate=(ImageButton) findViewById(R.id.imageButton);
         final ImageButton back=(ImageButton) findViewById(R.id.imageButton2);
         /*skip.setOnClickListener(new View.OnClickListener() {
         @Override
@@ -127,20 +134,20 @@ private int mCurrentPage;
     //int j=viewPager.getCurrentItem();
     public void obClick(View view) {
         switch (view.getId()) {
-            case R.id.imageButton:
+            //case R.id.imageButton:
             case R.id.next:
 
                     if(viewPager.getCurrentItem()==0)viewPager.setCurrentItem(1);
                 else if(viewPager.getCurrentItem()==1)viewPager.setCurrentItem(2);
                     else{ Intent i=new Intent(getApplicationContext(),MainActivity.class);
                         startActivity(i);}break;
-            case R.id.imageButton2:
+
             case R.id.previous:
                  if(viewPager.getCurrentItem()==1)viewPager.setCurrentItem(0);
             else if(viewPager.getCurrentItem()==2) viewPager.setCurrentItem(1);
             break;
             case R.id.skip_button:Intent i=new Intent(getApplicationContext(),MainActivity.class);
-                startActivity(i);break;
+                startActivity(i); finish(); break;
 
         }}
 }
