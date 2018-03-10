@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-   >
+    android:orientation="vertical">
 
 
     <TextView
         android:id="@+id/ob_vp_tv_header"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_marginStart="0dp"
         android:layout_marginTop="50dp"
+        android:layout_weight="1"
         android:fontFamily="@font/satisfy"
+        android:paddingTop="20dp"
         android:text="Participate And Win Exciting Goodies"
         android:textAlignment="center"
         android:textColor="#fff"
@@ -23,25 +25,18 @@
         android:id="@+id/ob_vp_tv_stat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/ob_vp_tv_header"
-        android:layout_marginTop="97dp"
-        android:fontFamily="@font/noto_sans_bold"
+        android:fontFamily="@font/oxygen_bold"
+        android:includeFontPadding="false"
         android:text="50+"
         android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@color/colorAccent"
         android:textSize="80sp" />
-
 
     <TextView
         android:id="@+id/ob_vp_tv_subtitle"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/ob_vp_tv_stat"
-        android:layout_marginTop="-20dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.15"
         android:fontFamily="@font/oxygen_bold"
         android:text="Fun Filled Events"
         android:textAlignment="center"
@@ -52,20 +47,15 @@
     <TextView
         android:id="@+id/ob_vp_tv_desc"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/ob_vp_tv_stat"
-        android:layout_marginTop="30dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
         android:fontFamily="@font/open_sans"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
+        android:padding="10dp"
         android:text="Enjoy to your fullest while gaining creative intellect by being a part of them!"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="#fff"
         android:textSize="14sp" />
-
 
 
     <!--<LinearLayout
@@ -88,4 +78,4 @@
             app:srcCompat="@drawable/ic_asset_3" />
     </LinearLayout>-->
 
-    </RelativeLayout>
+</LinearLayout>

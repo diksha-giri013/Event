@@ -69,14 +69,14 @@
         android:id="@+id/dash_rv_eventcard"
         android:layout_width="match_parent"
         android:layout_height="230dp"
+        android:layout_above="@+id/dash_rv_catlist"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/dash_tv_cat_title"
-        android:layout_above="@+id/dash_rv_catlist"
         android:padding="15dp"
         android:paddingBottom="0dp"
         android:paddingEnd="0dp"
         android:paddingRight="0dp"
-         />
+        tools:listitem="@layout/recy_card" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/dash_rv_catlist"

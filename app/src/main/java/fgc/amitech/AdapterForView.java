@@ -28,13 +28,13 @@ class AdapterForView extends PagerAdapter{
     };
     public String[] number_text={
             "50+",
-            "100+",
+            "600+",
             "75+"
     };
     public String[] number_text2={
             "Fun Filled Events",
-            "Something",
-            "AnyThing"
+            "Participations",
+            "Spectacular Prizes"
     };
     public String[] list_text={
             "Enjoy to your fullest while gaining creative intellect by being a part of them!",
@@ -53,7 +53,7 @@ class AdapterForView extends PagerAdapter{
 
     @Override
     public boolean isViewFromObject(View view, Object object) {
-        return view==(RelativeLayout)object;//**change to appropriate layout
+        return view==(LinearLayout)object;//**change to appropriate layout
     }
 
     @Override
@@ -79,6 +79,6 @@ class AdapterForView extends PagerAdapter{
 
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
-        container.removeView((RelativeLayout)object);
+        container.removeView((LinearLayout)object);
     }
 }
