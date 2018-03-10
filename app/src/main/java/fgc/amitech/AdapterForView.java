@@ -5,13 +5,7 @@ import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 /**
@@ -59,7 +53,7 @@ class AdapterForView extends PagerAdapter{
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
         layoutInflater=(LayoutInflater)mCtx.getSystemService(mCtx.LAYOUT_INFLATER_SERVICE);
-        View view=layoutInflater.inflate(R.layout.card,container,false);
+        View view=layoutInflater.inflate(R.layout.ob_vp_content,container,false);
 
         TextView text1=(TextView) view.findViewById(R.id.ob_vp_tv_header);
         text1.setText(heading[position]);
