@@ -4,34 +4,65 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/detail_gradient"
     android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignBottom="@+id/dash_vp_title"
+        android:layout_below="@+id/toolbar"
+        android:scaleType="centerCrop"
+        android:src="@drawable/paint" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/dash_vp_title"
         android:layout_width="match_parent"
-        android:layout_height="200dp">
-
+        android:layout_height="150dp"
+        android:layout_below="@+id/toolbar">
     </android.support.v4.view.ViewPager>
+
+    <TextSwitcher
+        android:layout_width="match_parent"
+        android:id="@+id/switcher"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dash_tv_vptitle"
+        android:textSize="20sp"/>
+
+
 
     <ImageButton
         android:id="@+id/imageButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/toolbar"
+        android:layout_alignTop="@+id/toolbar"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
         android:background="#00000000"
+        android:tint="#fff"
         app:srcCompat="@drawable/ic_menu_black_24dp" />
 
     <TextView
         android:id="@+id/dash_tv_vptitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imageButton2"
+        android:layout_alignTop="@+id/dash_vp_title"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="36dp"
-        android:fontFamily="@font/open_sans_bold_italic"
-        android:text="AMITECH"
-        android:textColor="#424242"
+        android:fontFamily="@font/satisfy"
+        android:includeFontPadding="false"
+        android:text="Amitech 2018"
+        android:textColor="#fff"
         android:textSize="45sp" />
 
 
@@ -41,18 +72,22 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/dash_vp_title"
-        android:layout_marginStart="15dp"
-        android:fontFamily="@font/noto_sans_bold"
-        android:padding="5dp"
+        android:fontFamily="@font/oxygen_bold"
+        android:padding="15dp"
         android:text="Best Of Amitech"
+        android:textColor="#424242"
         android:textSize="@dimen/header" />
 
     <SearchView
         android:id="@+id/dash_search"
+        style="@android:style/Widget.Material.Light.SearchView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/dash_tv_cat_title"
-        android:layout_marginStart="230dp" />
+        android:layout_alignEnd="@+id/toolbar"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/toolbar"
+        android:layout_marginEnd="5dp"
+        android:searchIcon="@drawable/ic_search_black_24dp" />
 
     <!--<TextView
         android:id="@+id/textView9"
@@ -63,37 +98,29 @@
         android:layout_marginTop="-10dp"
         android:fontFamily="@font/oxygen_light"
         android:text="2018 is here"
-        android:textSize="25sp" />-->
-    <TextSwitcher
-        android:layout_width="match_parent"
-        android:id="@+id/switcher"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/dash_tv_vptitle"
-        android:textSize="30sp"
-        >
-        </TextSwitcher>
+        android:textColor="#cccccc"
+        android:textSize="20sp" />-->
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/dash_rv_eventcard"
         android:layout_width="match_parent"
-        android:layout_height="230dp"
+        android:layout_height="wrap_content"
         android:layout_above="@+id/dash_rv_catlist"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/dash_tv_cat_title"
-        android:padding="15dp"
-        android:paddingBottom="0dp"
-        android:paddingEnd="0dp"
-        android:paddingRight="0dp"
-        tools:listitem="@layout/recy_card" />
+        android:paddingStart="15dp"
+        android:scrollbarAlwaysDrawHorizontalTrack="false"
+        android:scrollbarAlwaysDrawVerticalTrack="false"
+        tools:listitem="@layout/dash_rv_eventcard" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/dash_rv_catlist"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:padding="15dp"
         android:paddingEnd="0dp"
-        android:layout_alignParentBottom="true"
         android:paddingRight="0dp" />
 
 </RelativeLayout>
