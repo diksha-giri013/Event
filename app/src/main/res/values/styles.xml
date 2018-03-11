@@ -14,8 +14,8 @@
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
     <style name="CustomText" parent="TextAppearance.AppCompat">
         <item name="android:textSize">20sp</item>
-        <item name="android:textColor">#cfffffff</item>
-        <item name="android:fontFamily">@font/oxygen_light</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:fontFamily">@font/satisfy</item>
         <item name="android:includeFontPadding">false</item>
 
     </style>
