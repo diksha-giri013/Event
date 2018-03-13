@@ -166,7 +166,7 @@
             android:foreground="@drawable/ic_ico_twt" />
 
         <Button
-            android:id="@+id/detail_btn_nav3"
+            android:id="@+id/detail_btn_prev"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -177,7 +177,7 @@
             android:textSize="@dimen/btn_text" />
 
         <Button
-            android:id="@+id/detail_btn_nav4"
+            android:id="@+id/detail_btn_next"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

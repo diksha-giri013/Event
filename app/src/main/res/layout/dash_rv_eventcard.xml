@@ -33,7 +33,7 @@
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
         android:layout_below="@id/dash_rv_card_tv_title"
-        android:layout_above="@id/dash_rv_card_bt_call"
+        android:layout_above="@id/dash_rv_card_bt_detail"
         android:elevation="15dp"
         android:fontFamily="@font/oxygen_light"
         android:gravity="center_vertical"
@@ -49,16 +49,16 @@
         android:layout_marginEnd="15dp"
         android:layout_alignParentStart="true"
         android:layout_alignEnd="@id/iv"
-        android:layout_above="@id/dash_rv_card_bt_call"
+        android:layout_above="@id/dash_rv_card_bt_detail"
         />
 
     <Button
-        android:id="@+id/dash_rv_card_bt_call"
+        android:id="@+id/dash_rv_card_bt_detail"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
         android:layout_alignBottom="@id/iv"
+        android:layout_alignParentStart="true"
         android:elevation="15dp"
         android:text="Details"
         android:textColor="@color/colorPrimaryDark" />
@@ -68,8 +68,8 @@
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/dash_rv_card_bt_call"
-        android:layout_toEndOf="@+id/dash_rv_card_bt_call"
+        android:layout_alignBottom="@+id/dash_rv_card_bt_detail"
+        android:layout_toEndOf="@+id/dash_rv_card_bt_detail"
         android:elevation="15dp"
         android:text="Favorite"
         android:textColor="@color/colorPrimaryDark" />
