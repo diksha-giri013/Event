@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Amity F Block, Sector 125, Noida Uttar Pradesh 201313"
+        android:textSize="20sp"
+        android:fontFamily="@font/oxygen_bold"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="0dp"
+        android:textColor="#424242"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Touch the map marker to navigate"
+        android:textSize="15sp"
+        android:fontFamily="@font/oxygen_light"
+        android:gravity="center_horizontal"
+        android:paddingBottom="15dp"
+        android:paddingTop="5dp"/>
+
+    <include layout="@layout/activity_maps"></include>
+</LinearLayout>
+

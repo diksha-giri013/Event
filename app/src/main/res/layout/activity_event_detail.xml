@@ -51,6 +51,7 @@
             android:layout_alignBaseline="@+id/detail_tv_evdate"
             android:layout_alignBottom="@+id/detail_tv_evdate"
             android:layout_toStartOf="@+id/detail_btn_register"
+            android:onClick="navclick"
             android:text="NAVIGATE"
             android:textColor="#221350"
             android:textSize="@dimen/btn_text" />
