@@ -51,11 +51,155 @@ public class EventDetails {
         int[] pos;
 
         title = new String[]{
+                //BEST OF AMITECH
+                "Argumentum",
+                "Battle Of Bands",
+                "Technovation",
+                "Sherlock Quiz",
+                //FUN Events
+                "Stupid Cupid",
+                "Tambola",
+                "Beg Borrow Steal",
+                //CULTURAL Events
+                "Kalakaari",
+                "Fashion Fingers",
+                "Serenade",
+                "Natraj"
+        };
+
+        desc = new String[]{
+                "Welcome to the world of logical reasoning and brilliant articulation. Leave your mark as the best debtor and critical thinker.",
+                "Present your ideas and arguments logically. Be a part of this brilliant event and win prizes worth up to 40000!",
+                "Present your ideas and arguments logically. Be a part of this brilliant event and win prizes worth up to 40000!",
+                "Present your ideas and arguments logically. Be a part of this brilliant event and win prizes worth up to 40000!",
+
+                "This event does not feature bows and arrows sadly but you can still have fun! Participate and find stupidity!",
+                "This event does not feature bows and arrows sadly but you can still have fun! Participate and find stupidity!",
+                "This event does not feature bows and arrows sadly but you can still have fun! Participate and find stupidity!",
+
+                "Showcase your talent and take your passion to the next level. Win prizes worth 50000!",
+                "Showcase your talent and take your passion to the next level. Win prizes worth 50000!",
+                "Showcase your talent and take your passion to the next level. Win prizes worth 50000!",
+                "Showcase your talent and take your passion to the next level. Win prizes worth 50000!"
+        };
+
+        cat = new String[]{
+                "BEST OF AMITECH",
+                "BEST OF AMITECH",
+                "BEST OF AMITECH",
+                "BEST OF AMITECH",
+                "FUN",
+                "FUN",
+                "FUN",
+                "CULTURAL",
+                "CULTURAL",
+                "CULTURAL",
+                "CULTURAL"
+        };
+
+        teamsize = new String[]{
+                "2-4 Members",
+                "3-8 Members",
+                "2-5 Members",
+                "Individual Participation",
+
+                "Individual Participation",
+                "2 Members",
+                "Individual Participation",
+
+                "6-10 Members",
+                "3-8 Members",
+                "7-9 Members",
+                "2-5 Members"
+        };
+
+        rule = new String[]{"Rules are very important for any event read them. \nEach member can present one argument.\nCross questioning is not allowed, chill life.\nBring your own pen and paper.",
+                "Rules are very important for any event read them. \nEach member can present one argument.",
+                "Rules are very important for any event read them. \nEach member can present one argument.Rules are very important for any event read them. \nEach member can present one argument.",
+                "Rules are very important for any event read them. \nEach member can present one argument.",
+
+                "Rules are very important for any event read them. \nEach member can present one argument.",
+                "Rules are very important for any event read them. \nEach member can present one argument.",
+                "Rules are very important for any event read them. \nEach member can present one argument.",
+
+                "Rules are very important for any event read them. \nEach member can present one argument.",
+                "Rules are very important for any event read them. \nEach member can present one argument.",
+                "Rules are very important for any event read them. \nEach member can present one argument.",
+                "Rules are very important for any event read them. \nEach member can present one argument."};
+
+        date = new String[]{
+                "25 April 2018",
+                "26 April 2018",
+                "25 April 2018",
+                "25 April 2018",
+
+                "26 April 2018",
+                "25 April 2018",
+                "25 April 2018",
+
+                "25 April 2018",
+                "26 April 2018",
+                "25 April 2018",
+                "25 April 2018"
+        };
+
+        loc = new String[]{
+                "Hall-2B",
+                "Main Stage",
+                "Auditorium",
+                "Booth 3",
+
+                "Ground",
+                "Booth 5",
+                "Booth 8",
+
+                "Hall-2B",
+                "Main Stage",
+                "Auditorium",
+                "Booth 3"
+        };
+
+        pos = new int[]{
+                1,
+                2,
+                3,
+                4,
+                1,
+                2,
+                3,
+                1,
+                2,
+                3,
+                4
+        };
+
+    for (int i = 0; i < pos.length; i++) {
+        event_card = new EventDetails(title[i], desc[i], date[i], cat[i], teamsize[i], loc[i], rule[i], pos[i]);
+        EventCard.add(event_card);
+    }
+    return EventCard;
+    }
+
+    public static ArrayList<EventDetails> makeBOAData(){ //function for making the data set of events
+        EventDetails event_card; //class object to store details
+        ArrayList<EventDetails> EventCard = new ArrayList<EventDetails>(); //class object array list to store entire data set
+
+        String[] title;
+        String[] desc;
+        String[] cat;
+        String[] teamsize;
+        String[] loc;
+        String[] rule;
+        String[] date;
+        int[] pos;
+
+        title = new String[]{
+                //BEST OF AMITECH
                 "Argumentum",
                 "Battle Of Bands",
                 "Technovation",
                 "Sherlock Quiz"
-        };
+                };
 
         desc = new String[]{
                 "Welcome to the world of logical reasoning and brilliant articulation. Leave your mark as the best debtor and critical thinker.",
@@ -65,11 +209,11 @@ public class EventDetails {
         };
 
         cat = new String[]{
-                "Best of Amitech",
-                "Best of Amitech",
-                "Best of Amitech",
-                "Best of Amitech"
-        };
+                "BEST OF AMITECH",
+                "BEST OF AMITECH",
+                "BEST OF AMITECH",
+                "BEST OF AMITECH"
+         };
 
         teamsize = new String[]{
                 "2-4 Members",
@@ -81,7 +225,8 @@ public class EventDetails {
         rule = new String[]{"Rules are very important for any event read them. \nEach member can present one argument.\nCross questioning is not allowed, chill life.\nBring your own pen and paper.",
                 "Rules are very important for any event read them. \nEach member can present one argument.",
                 "Rules are very important for any event read them. \nEach member can present one argument.Rules are very important for any event read them. \nEach member can present one argument.",
-                "Rules are very important for any event read them. \nEach member can present one argument."};
+                "Rules are very important for any event read them. \nEach member can present one argument."
+        };
 
         date = new String[]{
                 "25 April 2018",
@@ -101,14 +246,237 @@ public class EventDetails {
                 1,
                 2,
                 3,
+                4,
+        };
+
+        for (int i = 0; i < pos.length; i++) {
+            event_card = new EventDetails(title[i], desc[i], date[i], cat[i], teamsize[i], loc[i], rule[i], pos[i]);
+            EventCard.add(event_card);
+        }
+        return EventCard;
+    }
+
+    public static ArrayList<EventDetails> makeFunData(){ //function for making the data set of events
+        EventDetails event_card; //class object to store details
+        ArrayList<EventDetails> EventCard = new ArrayList<EventDetails>(); //class object array list to store entire data set
+
+        String[] title;
+        String[] desc;
+        String[] cat;
+        String[] teamsize;
+        String[] loc;
+        String[] rule;
+        String[] date;
+        int[] pos;
+
+        title = new String[]{
+                "Stupid Cupid",
+                "Tambola",
+                "Beg Borrow Steal"
+        };
+
+        desc = new String[]{
+                "This event does not feature bows and arrows sadly but you can still have fun! Participate and find stupidity!",
+                "This event does not feature bows and arrows sadly but you can still have fun! Participate and find stupidity!",
+                "This event does not feature bows and arrows sadly but you can still have fun! Participate and find stupidity!"
+        };
+
+        cat = new String[]{
+                "FUN",
+                "FUN",
+                "FUN"
+        };
+
+        teamsize = new String[]{
+                "Individual Participation",
+                "2 Members",
+                "Individual Participation"
+        };
+
+        rule = new String[]{
+                "Rules are very important for any event read them. \nEach member can present one argument.",
+                "Rules are very important for any event read them. \nEach member can present one argument.",
+                "Rules are very important for any event read them. \nEach member can present one argument."
+        };
+
+        date = new String[]{
+                "26 April 2018",
+                "25 April 2018",
+                "25 April 2018"
+        };
+
+        loc = new String[]{
+                "Ground",
+                "Booth 5",
+                "Booth 8"
+        };
+
+        pos = new int[]{
+                1,
+                2,
+                3
+        };
+
+        for (int i = 0; i < pos.length; i++) {
+            event_card = new EventDetails(title[i], desc[i], date[i], cat[i], teamsize[i], loc[i], rule[i], pos[i]);
+            EventCard.add(event_card);
+        }
+        return EventCard;
+    }
+
+    public static ArrayList<EventDetails> makeCultData(){ //function for making the data set of events
+        EventDetails event_card; //class object to store details
+        ArrayList<EventDetails> EventCard = new ArrayList<EventDetails>(); //class object array list to store entire data set
+
+        String[] title;
+        String[] desc;
+        String[] cat;
+        String[] teamsize;
+        String[] loc;
+        String[] rule;
+        String[] date;
+        int[] pos;
+
+        title = new String[]{
+
+                "Kalakaari",
+                "Fashion Fingers",
+                "Serenade",
+                "Natraj"
+        };
+
+        desc = new String[]{
+                "Showcase your talent and take your passion to the next level. Win prizes worth 50000!",
+                "Showcase your talent and take your passion to the next level. Win prizes worth 50000!",
+                "Showcase your talent and take your passion to the next level. Win prizes worth 50000!",
+                "Showcase your talent and take your passion to the next level. Win prizes worth 50000!"
+        };
+
+        cat = new String[]{
+                "CULTURAL",
+                "CULTURAL",
+                "CULTURAL",
+                "CULTURAL"
+        };
+
+        teamsize = new String[]{
+                "6-10 Members",
+                "3-8 Members",
+                "7-9 Members",
+                "2-5 Members"
+        };
+
+        rule = new String[]{
+                "Rules are very important for any event read them. \nEach member can present one argument.",
+                "Rules are very important for any event read them. \nEach member can present one argument.",
+                "Rules are very important for any event read them. \nEach member can present one argument.",
+                "Rules are very important for any event read them. \nEach member can present one argument."
+        };
+
+        date = new String[]{
+                "25 April 2018",
+                "26 April 2018",
+                "25 April 2018",
+                "25 April 2018"
+        };
+
+        loc = new String[]{
+                "Hall-2B",
+                "Main Stage",
+                "Auditorium",
+                "Booth 3"
+        };
+
+        pos = new int[]{
+
+                1,
+                2,
+                3,
                 4
         };
 
-    for (int i = 0; i < 4; i++) {
-        event_card = new EventDetails(title[i], desc[i], date[i], cat[i], teamsize[i], loc[i], rule[i], pos[i]);
-        EventCard.add(event_card);
-    }
-    return EventCard;
+        for (int i = 0; i < pos.length; i++) {
+            event_card = new EventDetails(title[i], desc[i], date[i], cat[i], teamsize[i], loc[i], rule[i], pos[i]);
+            EventCard.add(event_card);
+        }
+        return EventCard;
     }
 
+    public static ArrayList<EventDetails> makeTechData(){ //function for making the data set of events
+        EventDetails event_card; //class object to store details
+        ArrayList<EventDetails> EventCard = new ArrayList<EventDetails>(); //class object array list to store entire data set
+
+        String[] title;
+        String[] desc;
+        String[] cat;
+        String[] teamsize;
+        String[] loc;
+        String[] rule;
+        String[] date;
+        int[] pos;
+
+        title = new String[]{
+
+                "Technovation",
+                "Counter Strike",
+                "Mini Militia",
+                "Swish 'N' Click"
+        };
+
+        desc = new String[]{
+                "Showcase your talent and take your passion to the next level. Win prizes worth 50000!",
+                "Showcase your talent and take your passion to the next level. Win prizes worth 50000!",
+                "Showcase your talent and take your passion to the next level. Win prizes worth 50000!",
+                "Showcase your talent and take your passion to the next level. Win prizes worth 50000!"
+        };
+
+        cat = new String[]{
+                "TECHNICAL",
+                "TECHNICAL",
+                "TECHNICAL",
+                "TECHNICAL"
+        };
+
+        teamsize = new String[]{
+                "6-10 Members",
+                "3-8 Members",
+                "7-9 Members",
+                "2-5 Members"
+        };
+
+        rule = new String[]{
+                "Rules are very important for any event read them. \nEach member can present one argument.",
+                "Rules are very important for any event read them. \nEach member can present one argument.",
+                "Rules are very important for any event read them. \nEach member can present one argument.",
+                "Rules are very important for any event read them. \nEach member can present one argument."
+        };
+
+        date = new String[]{
+                "25 April 2018",
+                "26 April 2018",
+                "25 April 2018",
+                "25 April 2018"
+        };
+
+        loc = new String[]{
+                "Hall-2B",
+                "Main Stage",
+                "Auditorium",
+                "Booth 3"
+        };
+
+        pos = new int[]{
+
+                1,
+                2,
+                3,
+                4
+        };
+
+        for (int i = 0; i < pos.length; i++) {
+            event_card = new EventDetails(title[i], desc[i], date[i], cat[i], teamsize[i], loc[i], rule[i], pos[i]);
+            EventCard.add(event_card);
+        }
+        return EventCard;
+    }
 }
