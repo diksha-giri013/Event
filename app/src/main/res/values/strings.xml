@@ -8,4 +8,17 @@
     \nCross questioning is not allowed, chill life.
     \nBring your own pen and paper.</string>
     <string name="title_activity_maps">Map</string>
+
+    <string name ="stringLiterary">#00B8D4</string>
+    <string name ="stringLiteraryDark">#006064</string>
+    <string name ="stringSponsored">#1DE9B6</string>
+    <string name ="stringSponsoredDark">#00BFA5</string>
+    <string name ="stringFun">#FF8F00</string>
+    <string name ="stringFunDark">#FF6F00</string>
+    <string name ="stringTechnical">#3949AB</string>
+    <string name ="stringTechnicalDark">#1A237E</string>
+    <string name ="stringBOA">#673AB7</string>
+    <string name ="stringBOADark">#4A148C</string>
+    <string name ="stringCultural">#F06292</string>
+    <string name ="stringCulturalDark">#C2185B</string>
 </resources>

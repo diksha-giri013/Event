@@ -3,15 +3,16 @@ package fgc.amitech;
 import android.content.Intent;
 import android.graphics.drawable.AnimatedVectorDrawable;
 import android.graphics.drawable.Drawable;
+import android.os.Bundle;
 import android.os.Handler;
 import android.support.graphics.drawable.AnimatedVectorDrawableCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.WindowManager;
 import android.widget.ImageView;
 
 public class SplashScreen extends AppCompatActivity {
     private static  int SPLASH_TIME_OUT=4000;
+    private PrefManager prefManager;
 AnimatedVectorDrawable avd;
 
     @Override
@@ -20,6 +21,7 @@ AnimatedVectorDrawable avd;
         setContentView(R.layout.activity_splash_screen);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         //ImageView myAnimation = findViewById(R.id.aniImage);
         //avd = (AnimatedVectorDrawable)myAnimation.getDrawable();
         //new Handler().postDelayed(new Runnable() {
@@ -47,10 +49,16 @@ AnimatedVectorDrawable avd;
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent homeIntent=new Intent(SplashScreen.this,OnBoarding.class);
-                startActivity(homeIntent);
-
-                finish();
+                Intent homeIntent2=new Intent(SplashScreen.this,MainActivity.class);
+                Intent onboardIntent=new Intent(SplashScreen.this,OnBoarding.class);
+                prefManager = new PrefManager(SplashScreen.this);
+                if (!prefManager.isFirstTimeLaunch()) {
+                    prefManager.setFirstTimeLaunch(false);
+                    startActivity(homeIntent2);
+                    finish();}
+                else{
+                    startActivity(onboardIntent);
+                finish();}
             }
         },SPLASH_TIME_OUT);
 

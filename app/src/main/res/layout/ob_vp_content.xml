@@ -27,7 +27,7 @@
         android:includeFontPadding="false"
         android:text="50+"
         android:textAlignment="center"
-        android:textColor="@color/colorAccent"
+        android:textColor="#E91E63"
         android:textSize="80sp" />
 
     <TextView
@@ -39,7 +39,7 @@
         android:text="Fun Filled Events"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textColor="@color/colorAccent"
+        android:textColor="#E91E63"
         android:textSize="30sp" />
 
     <TextView

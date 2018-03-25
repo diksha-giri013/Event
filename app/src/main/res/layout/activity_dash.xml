@@ -27,9 +27,8 @@
     <android.support.v4.view.ViewPager
         android:id="@+id/dash_vp_title"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_below="@+id/toolbar">
-    </android.support.v4.view.ViewPager>
+        android:layout_height="160dp"
+        android:layout_below="@+id/toolbar"></android.support.v4.view.ViewPager>
 
     <TextSwitcher
         android:layout_width="match_parent"
@@ -74,9 +73,10 @@
         android:layout_below="@+id/dash_vp_title"
         android:fontFamily="@font/oxygen_bold"
         android:padding="15dp"
-        android:text="Best Of Amitech"
+        android:text="BEST OF AMITECH"
+        android:textAllCaps="false"
         android:textColor="#424242"
-        android:textSize="@dimen/header" />
+        android:textSize="20sp" />
 
     <SearchView
         android:id="@+id/dash_search"
@@ -118,9 +118,12 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_alignParentStart="true"
         android:padding="15dp"
         android:paddingEnd="0dp"
-        android:paddingRight="0dp" />
+        android:paddingRight="0dp"
+        tools:listitem="@layout/fragment_rv_category" />
 
 </RelativeLayout>
