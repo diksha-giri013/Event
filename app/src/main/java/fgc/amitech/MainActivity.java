@@ -229,20 +229,20 @@ public class MainActivity extends AppCompatActivity {
                 }
                else {
                     EventDetails card2;
-                    if(selectedCat=="FAVOURITE")card2 = favEvent.get(position);
-                    else card2 = meventCard.get(position);
+                    //if(selectedCat=="FAVOURITE")card2 = favEvent.get(position);
+                    /*else*/ card2 = meventCard.get(position);
                     if(bt_fav.getText()=="FAVOURITE"){
                        card2.setEvent_favorite(1);
-                       meventCard.set(position,card2);
+                       //meventCard.set(position,card2);
                        favEvent.add(card2);
                        bt_fav.setText("UNFAVOURITE");
                     }
                     else{
                         card2.setEvent_favorite(0);
-                        meventCard.set(position,card2);
+                        //meventCard.set(position,card2);
                         favEvent.remove(card2);
-                        cardAdapter.notifyDataSetChanged();
-                        dash_rv_eventCard.setAdapter(cardAdapter);
+                        //cardAdapter.notifyDataSetChanged();
+                        //dash_rv_eventCard.setAdapter(cardAdapter);
                         bt_fav.setText("FAVOURITE");
 
                     }
@@ -279,9 +279,9 @@ public class MainActivity extends AppCompatActivity {
             EventDetails event_card = meventCard.get(position);
             if(!favEvent.isEmpty()) {
                 for (int i = 0; i < favEvent.size(); i++) {
-                    if (event_card.getCard_title() == favEvent.get(i).getCard_title()) {
-                        event_card.setEvent_favorite(1);
-                    }
+                    if (event_card.getCard_title() == favEvent.get(i).getCard_title())
+                        viewHolder.bt_fav.setText("UNFAVOURITE");
+                        //event_card.setEvent_favorite(1);
                 }
             }
             int color, colorDark;
@@ -336,8 +336,9 @@ public class MainActivity extends AppCompatActivity {
                 card_det.setTextColor(colorDark);
                 card_fav.setTextColor(colorDark);
                 line.setBackgroundColor(color);
-                if(event_card.getEvent_favorite()==1)
-                    viewHolder.bt_fav.setText("UNFAVOURITE");
+                //if(event_card.getEvent_favorite()==1)
+                    //viewHolder.bt_fav.setText("UNFAVOURITE");
+                //else viewHolder.bt_fav.setText("FAVOURITE");
             //}
             /*else {
                 meventCard.remove(event_card);

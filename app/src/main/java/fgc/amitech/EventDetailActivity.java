@@ -160,6 +160,7 @@ public class EventDetailActivity extends AppCompatActivity {
   }
 
    public static void getCardData(EventDetails card, int pos){ //gets the data of the card clicked in RV
+        c=0;
         card_data=card;
         card_pos=card_data.getCard_pos()-1;
    }
