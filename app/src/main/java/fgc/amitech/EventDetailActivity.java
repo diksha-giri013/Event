@@ -21,8 +21,9 @@ import static fgc.amitech.EventDetails.makeTechData;
 
 public class EventDetailActivity extends AppCompatActivity {
     private ArrayList<EventDetails> cardData;
+    private static ArrayList<EventDetails> favcardData;
     private static EventDetails card_data;
-
+    private static int c;
     private TextView detail_title;
     private TextView detail_desc;
     private TextView detail_date;
@@ -62,47 +63,50 @@ public class EventDetailActivity extends AppCompatActivity {
         detail_img = (ImageView) findViewById(R.id.detail_iv_evimg);
         populateDetails();
 
-        switch (card_data.getCard_category()){
-            case "ALL EVENTS":
-                color = getResources().getColor(R.color.colorAllDark);
-                detail_grad.setImageDrawable(getResources().getDrawable(R.drawable.grad_boa));
-                cardData = makeEventData();
-                break;
-            case "BEST OF AMITECH":
-                color = getResources().getColor(R.color.colorBOADark);
-                detail_grad.setImageDrawable(getResources().getDrawable(R.drawable.grad_boa));
-                cardData = makeBOAData();
-                break;
-            case "FUN":
-                color = getResources().getColor(R.color.colorFunDark);
-                detail_grad.setImageDrawable(getResources().getDrawable(R.drawable.grad_fun));
-                cardData = makeFunData();
-                break;
-            case "CULTURAL":
-                color = getResources().getColor(R.color.colorCulturalDark);
-                detail_grad.setImageDrawable(getResources().getDrawable(R.drawable.grad_cult));
-                cardData = makeCultData();
-                break;
-            case "LITERARY":
-                color = getResources().getColor(R.color.colorLiteraryDark);
-                detail_grad.setImageDrawable(getResources().getDrawable(R.drawable.grad_lit));
-                cardData = makeLitData();
-                break;
-            case "TECHNICAL":
-                color = getResources().getColor(R.color.colorTechnicalDark);
-                detail_grad.setImageDrawable(getResources().getDrawable(R.drawable.grad_tech));
-                cardData = makeTechData();
-                break;
-            case "SPONSORED":
-                color = getResources().getColor(R.color.colorSponsoredDark);
-                detail_grad.setImageDrawable(getResources().getDrawable(R.drawable.grad_spon));
-                cardData = makeSponData();
-                break;
-            default:
-                color = getResources().getColor(R.color.colorAllDark);
-                cardData = makeEventData();
-                break;
+        if(c!=1) {
+            switch (card_data.getCard_category()) {
+                case "ALL EVENTS":
+                    color = getResources().getColor(R.color.colorAllDark);
+                    detail_grad.setImageDrawable(getResources().getDrawable(R.drawable.grad_boa));
+                    cardData = makeEventData();
+                    break;
+                case "BEST OF AMITECH":
+                    color = getResources().getColor(R.color.colorBOADark);
+                    detail_grad.setImageDrawable(getResources().getDrawable(R.drawable.grad_boa));
+                    cardData = makeBOAData();
+                    break;
+                case "FUN":
+                    color = getResources().getColor(R.color.colorFunDark);
+                    detail_grad.setImageDrawable(getResources().getDrawable(R.drawable.grad_fun));
+                    cardData = makeFunData();
+                    break;
+                case "CULTURAL":
+                    color = getResources().getColor(R.color.colorCulturalDark);
+                    detail_grad.setImageDrawable(getResources().getDrawable(R.drawable.grad_cult));
+                    cardData = makeCultData();
+                    break;
+                case "LITERARY":
+                    color = getResources().getColor(R.color.colorLiteraryDark);
+                    detail_grad.setImageDrawable(getResources().getDrawable(R.drawable.grad_lit));
+                    cardData = makeLitData();
+                    break;
+                case "TECHNICAL":
+                    color = getResources().getColor(R.color.colorTechnicalDark);
+                    detail_grad.setImageDrawable(getResources().getDrawable(R.drawable.grad_tech));
+                    cardData = makeTechData();
+                    break;
+                case "SPONSORED":
+                    color = getResources().getColor(R.color.colorSponsoredDark);
+                    detail_grad.setImageDrawable(getResources().getDrawable(R.drawable.grad_spon));
+                    cardData = makeSponData();
+                    break;
+                default:
+                    color = getResources().getColor(R.color.colorAllDark);
+                    cardData = makeEventData();
+                    break;
+            }
         }
+        else {cardData = favcardData; color = getResources().getColor(R.color.colorAllDark);}
         //cardData = makeEventData();
         //cardData=filterEvents(cardData);
 
@@ -146,8 +150,9 @@ public class EventDetailActivity extends AppCompatActivity {
            if(card_pos < cardData.size()-1) btn_next.setVisibility(View.VISIBLE);
 
            if(card_pos == -1) {
+
                MainActivity.getSelectedFromDetails(card_data.getCard_category());
-               homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+               homeIntent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                startActivity(homeIntent);
                finish();
            }
@@ -158,6 +163,12 @@ public class EventDetailActivity extends AppCompatActivity {
         card_data=card;
         card_pos=card_data.getCard_pos()-1;
    }
+
+    public static void getFavCardData(ArrayList<EventDetails> card, int pos){
+       c=1;
+       favcardData=card;
+       card_pos=favcardData.get(pos).getCard_pos()-1;
+       card_data=favcardData.get(pos);}
 
    /*public ArrayList<EventDetails> filterEvents(ArrayList<EventDetails> data){
        EventDetails temp; int pos=0;

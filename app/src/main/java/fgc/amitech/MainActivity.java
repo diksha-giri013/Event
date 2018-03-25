@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView dash_rv_eventCard;
     private eventCardAdapter cardAdapter;
     private ArrayList<EventDetails> eventCard = new ArrayList<EventDetails>();
-    private ArrayList<EventDetails> favEvent = new ArrayList<EventDetails>();
+    public static ArrayList<EventDetails> favEvent = new ArrayList<EventDetails>();
     //--finish--
 
     //Start Event category variables
@@ -218,28 +218,38 @@ public class MainActivity extends AppCompatActivity {
                 if(view!=bt_fav) {
                         if (position != RecyclerView.NO_POSITION) { // Check if an item was deleted, but the user clicked it before the UI removed it
                         EventDetails card = meventCard.get(position);
+                        if(selectedCat!="FAVOURITE")
                         EventDetailActivity.getCardData(card, position);
+                        else EventDetailActivity.getFavCardData(favEvent, position);
                         // We can access the data within the views
                         Intent intent = new Intent(context, EventDetailActivity.class);
-                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        //intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         context.startActivity(intent);
                     }
                 }
                else {
-                    EventDetails card2 = meventCard.get(position);
+                    EventDetails card2;
+                    if(selectedCat=="FAVOURITE")card2 = favEvent.get(position);
+                    else card2 = meventCard.get(position);
                     if(bt_fav.getText()=="FAVOURITE"){
                        card2.setEvent_favorite(1);
+                       meventCard.set(position,card2);
                        favEvent.add(card2);
-                       fav_flag=1;
                        bt_fav.setText("UNFAVOURITE");
                     }
                     else{
                         card2.setEvent_favorite(0);
+                        meventCard.set(position,card2);
                         favEvent.remove(card2);
-                        if(favEvent.isEmpty()) fav_flag=0;
+                        cardAdapter.notifyDataSetChanged();
+                        dash_rv_eventCard.setAdapter(cardAdapter);
                         bt_fav.setText("FAVOURITE");
+
                     }
-                }
+                    for(int i = 0; i<favEvent.size(); i++){
+                        favEvent.get(i).card_pos=i+1;
+                    }
+                    cardAdapter.notifyDataSetChanged(); }
             }
         }
 
@@ -326,7 +336,8 @@ public class MainActivity extends AppCompatActivity {
                 card_det.setTextColor(colorDark);
                 card_fav.setTextColor(colorDark);
                 line.setBackgroundColor(color);
-                if(event_card.getEvent_favorite()==1) viewHolder.bt_fav.setText("UNFAVOURITE");
+                if(event_card.getEvent_favorite()==1)
+                    viewHolder.bt_fav.setText("UNFAVOURITE");
             //}
             /*else {
                 meventCard.remove(event_card);
@@ -401,7 +412,6 @@ public class MainActivity extends AppCompatActivity {
                 }
               categoryAdapter.notifyDataSetChanged();
               selectedCat=name;
-
               cardAdapter = new eventCardAdapter(context, eventCard);
               cardAdapter.notifyDataSetChanged();
               dash_rv_eventCard.setAdapter(cardAdapter);
