@@ -18,6 +18,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextSwitcher;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.ViewSwitcher;
 
 import java.util.ArrayList;
@@ -62,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView dash_rv_eventCard;
     private eventCardAdapter cardAdapter;
     private ArrayList<EventDetails> eventCard = new ArrayList<EventDetails>();
-
+    private ArrayList<EventDetails> favEvent = new ArrayList<EventDetails>();
     //--finish--
 
     //Start Event category variables
@@ -137,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
         eventCat = new String []{
                 "BEST OF AMITECH",
                 "ALL EVENTS",
-                "FAVORITE",
+                "FAVOURITE",
                 "TECHNICAL",
                 "CULTURAL",
                 "FUN",
@@ -180,6 +181,8 @@ public class MainActivity extends AppCompatActivity {
 
     class eventCardAdapter extends RecyclerView.Adapter<eventCardAdapter.ViewHolder> {
         private ArrayList<EventDetails> meventCard;
+
+        private int fav_flag=0;
         private Context mcontext;
         //private String selectedCat = "BEST OF AMITECH";
 
@@ -205,7 +208,7 @@ public class MainActivity extends AppCompatActivity {
                 itemView.setOnClickListener(this);
                 bt_details.setOnClickListener(this);
                 bt_fav.setOnClickListener(this);
-                bt_fav.setText("FAVORITE");
+                bt_fav.setText("FAVOURITE");
             }
 
             // Handles the row being being clicked
@@ -224,15 +227,17 @@ public class MainActivity extends AppCompatActivity {
                 }
                else {
                     EventDetails card2 = meventCard.get(position);
-                    if(bt_fav.getText()=="FAVORITE"){
+                    if(bt_fav.getText()=="FAVOURITE"){
                        card2.setEvent_favorite(1);
-                       meventCard.set(position,card2);
-                       bt_fav.setText("UNFAVORITE");
+                       favEvent.add(card2);
+                       fav_flag=1;
+                       bt_fav.setText("UNFAVOURITE");
                     }
                     else{
                         card2.setEvent_favorite(0);
-                        meventCard.set(position,card2);
-                        bt_fav.setText("FAVORITE");
+                        favEvent.remove(card2);
+                        if(favEvent.isEmpty()) fav_flag=0;
+                        bt_fav.setText("FAVOURITE");
                     }
                 }
             }
@@ -262,6 +267,13 @@ public class MainActivity extends AppCompatActivity {
         public void onBindViewHolder(eventCardAdapter.ViewHolder viewHolder, int position) {
             // Get the data model based on position
             EventDetails event_card = meventCard.get(position);
+            if(!favEvent.isEmpty()) {
+                for (int i = 0; i < favEvent.size(); i++) {
+                    if (event_card.getCard_title() == favEvent.get(i).getCard_title()) {
+                        event_card.setEvent_favorite(1);
+                    }
+                }
+            }
             int color, colorDark;
             color = getResources().getColor(R.color.colorBOADark);
             colorDark = getResources().getColor(R.color.colorAccent);
@@ -314,6 +326,7 @@ public class MainActivity extends AppCompatActivity {
                 card_det.setTextColor(colorDark);
                 card_fav.setTextColor(colorDark);
                 line.setBackgroundColor(color);
+                if(event_card.getEvent_favorite()==1) viewHolder.bt_fav.setText("UNFAVOURITE");
             //}
             /*else {
                 meventCard.remove(event_card);
@@ -360,6 +373,13 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case "BEST OF AMITECH":
                         eventCard = makeBOAData();
+                        break;
+                    case "FAVOURITE":
+                        eventCard = favEvent;
+                        if(favEvent.isEmpty()) {
+                            //Toast toast = Toast.makeText(MainActivity.this, "NO FAVOURITE EVENTS!", Toast.LENGTH_SHORT);
+                            Toast.makeText(MainActivity.this, "NO FAVOURITE EVENTS!", Toast.LENGTH_SHORT).show();
+                        }
                         break;
                     case "FUN":
                         eventCard = makeFunData();

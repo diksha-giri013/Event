@@ -147,7 +147,7 @@ public class EventDetailActivity extends AppCompatActivity {
 
            if(card_pos == -1) {
                MainActivity.getSelectedFromDetails(card_data.getCard_category());
-               homeIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+               homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                startActivity(homeIntent);
                finish();
            }
