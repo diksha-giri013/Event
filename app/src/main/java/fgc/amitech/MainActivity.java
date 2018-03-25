@@ -212,7 +212,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int position = getAdapterPosition(); // gets item position
-                if(view==bt_details) {
+                if(view!=bt_fav) {
                         if (position != RecyclerView.NO_POSITION) { // Check if an item was deleted, but the user clicked it before the UI removed it
                         EventDetails card = meventCard.get(position);
                         EventDetailActivity.getCardData(card, position);
