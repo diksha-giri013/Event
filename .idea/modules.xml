@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Amitech.iml" filepath="$PROJECT_DIR$/Amitech.iml" />
+      <module fileurl="file://C:\Users\payal\AndroidStudioProjects\Events\Amitech.iml" filepath="C:\Users\payal\AndroidStudioProjects\Events\Amitech.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Events.iml" filepath="$PROJECT_DIR$/Events.iml" />
       <module fileurl="file://C:\Users\Diksha\AndroidStudioProjects\Amitech\.idea\Events.iml" filepath="C:\Users\Diksha\AndroidStudioProjects\Amitech\.idea\Events.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>

@@ -71,7 +71,7 @@
         android:layout_alignBottom="@+id/dash_rv_card_bt_detail"
         android:layout_toEndOf="@+id/dash_rv_card_bt_detail"
         android:elevation="15dp"
-        android:text="Favorite"
+        android:text="Favourite"
         android:textColor="@color/colorPrimaryDark" />
 
 

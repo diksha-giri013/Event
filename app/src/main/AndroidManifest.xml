@@ -26,7 +26,10 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".EventDetailActivity"></activity>
+        <activity android:name=".EventDetailActivity" />
+        <activity android:name=".Contact_activity" />
+        <activity android:name=".SponsorActivity" />
+        <activity android:name=".EventActivity"></activity>
     </application>
 
 </manifest>
