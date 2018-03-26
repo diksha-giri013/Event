@@ -1,24 +1,12 @@
 package fgc.amitech;
 
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.Rect;
-import android.service.notification.StatusBarNotification;
-import android.support.v4.content.ContextCompat;
+import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
 import android.view.WindowManager;
-import android.view.animation.AccelerateInterpolator;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.view.animation.BounceInterpolator;
-import android.view.animation.TranslateAnimation;
 import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.rd.PageIndicatorView;
@@ -26,6 +14,8 @@ import com.rd.PageIndicatorView;
 public class OnBoarding extends AppCompatActivity {
     ViewPager viewPager;
     private AdapterForView adapterForView;
+    private PrefManager prefManager;
+    private Intent homeIntent;
     LinearLayout sliderDotsPanel;
    // private int dotsCount;
    // private ImageView[] dots;
@@ -36,7 +26,7 @@ private int mCurrentPage;
         setContentView(R.layout.activity_on_boarding);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
+        homeIntent=new Intent(OnBoarding.this,MainActivity.class);
         viewPager=(ViewPager)findViewById(R.id.vp_intro);
         //sliderDotsPanel=findViewById(R.id.sliderDots);
         final PageIndicatorView pageIndicatorView = findViewById(R.id.pageIndicatorView);
@@ -128,15 +118,25 @@ private int mCurrentPage;
 
                     if(viewPager.getCurrentItem()==0)viewPager.setCurrentItem(1);
                 else if(viewPager.getCurrentItem()==1)viewPager.setCurrentItem(2);
-                    else{ Intent i=new Intent(getApplicationContext(),MainActivity.class);
-                        startActivity(i); finish(); }break;
+                    else{ //Intent i=new Intent(getApplicationContext(),MainActivity.class);
+                        //startActivity(i);
+                        setpref(); finish(); }break;
 
             case R.id.previous:
                  if(viewPager.getCurrentItem()==1)viewPager.setCurrentItem(0);
             else if(viewPager.getCurrentItem()==2) viewPager.setCurrentItem(1);
             break;
-            case R.id.skip_button:Intent i=new Intent(getApplicationContext(),MainActivity.class);
-                startActivity(i); finish(); break;
+            case R.id.skip_button://Intent i=new Intent(getApplicationContext(),MainActivity.class);
+                //startActivity(i);
+                setpref(); finish(); break;
 
         }}
+    public void setpref(){
+        prefManager = new PrefManager(this);
+            prefManager.setFirstTimeLaunch(false);
+            startActivity(homeIntent);
+            finish();
+
+    }
+
 }
