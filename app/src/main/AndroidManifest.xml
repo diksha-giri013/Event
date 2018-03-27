@@ -29,7 +29,8 @@
         <activity android:name=".EventDetailActivity" />
         <activity android:name=".Contact_activity" />
         <activity android:name=".SponsorActivity" />
-        <activity android:name=".EventActivity"></activity>
+        <activity android:name=".EventActivity" />
+        <activity android:name=".DeveloperActivity"></activity>
     </application>
 
 </manifest>

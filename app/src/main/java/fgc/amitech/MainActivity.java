@@ -129,6 +129,7 @@ public class MainActivity extends AppCompatActivity  implements AdapterView.OnIt
                             //    newGame();
                              //   return true;
                             //default:
+                            case R.id.developer: startActivity(new Intent(MainActivity.this,DeveloperActivity.class)); finish(); break;
                               //  menuItem.setChecked(true);
                               //  mDrawerLayout.closeDrawers();
                                 //if (fragment != null) {
