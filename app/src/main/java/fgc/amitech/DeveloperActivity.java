@@ -2,12 +2,12 @@ package fgc.amitech;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
@@ -32,7 +32,7 @@ public class DeveloperActivity extends AppCompatActivity {
                             //setContentView(R.layout.activity_dash);
 
                             case R.id.contact:startActivity(new Intent(DeveloperActivity.this,Contact_activity.class)); finish(); break;
-                                // i=new Intent(MainActivity.this,Contact_activity.class);
+                            // i=new Intent(MainActivity.this,Contact_activity.class);
                             case R.id.sponsor:// i=new Intent(MainActivity.this,SponsorActivity.class);
                                 startActivity(new Intent(DeveloperActivity.this,SponsorActivity.class)); finish(); break;
 
@@ -69,4 +69,3 @@ public class DeveloperActivity extends AppCompatActivity {
     }
 
 }
-
