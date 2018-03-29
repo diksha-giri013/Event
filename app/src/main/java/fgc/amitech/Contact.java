@@ -1,8 +1,5 @@
 package fgc.amitech;
 
-import android.widget.ImageButton;
-import android.widget.ImageView;
-
 import java.util.ArrayList;
 
 /**
@@ -13,14 +10,14 @@ public class Contact {
     private String mpost;
     private String mname;
     private int mpic;
-  //  private int mwhtsapp;
-  //  private int mcall;
+    //  private int mwhtsapp;
+    //  private int mcall;
 
     public Contact(String post, String name, int pic) {
         mpost = post;
         mname = name;
         mpic = pic;
-     //   mwhtsapp = whtsapp;
+        //   mwhtsapp = whtsapp;
         //mcall = call;
     }
 
@@ -36,21 +33,21 @@ public class Contact {
         return mpic;
     }
 
-   // public int getWhtsapp() {
-       // return mwhtsapp;
-   // }
+    // public int getWhtsapp() {
+    // return mwhtsapp;
+    // }
 
-   // public int getCall() {
-      //  return mcall;
- //   }
+    // public int getCall() {
+    //  return mcall;
+    //   }
 
     public static ArrayList<Contact>createContactList(){
         Contact contact_card;
         String[] conPost;
         String[] conName;
         int[] picture;
-       // int whatsapp;
-       // int call;
+        // int whatsapp;
+        // int call;
         ArrayList<Contact> contacts=new ArrayList<Contact>();
         conPost = new String[]{
                 "BRAND AMBASSADOR",
@@ -83,5 +80,4 @@ public class Contact {
 
         }
         return contacts;
-        }}
-
+    }}

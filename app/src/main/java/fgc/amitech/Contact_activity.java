@@ -3,12 +3,12 @@ package fgc.amitech;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -20,14 +20,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Contact_activity extends AppCompatActivity {
     private DrawerLayout mDrawerLayout;
     private RecyclerView mRecyclerView;
-//    private RecyclerView.Adapter mAdapter;
-  //  private RecyclerView.LayoutManager mLayoutManager;
-private ArrayList<Contact> contacts = new ArrayList<Contact>();
+    //    private RecyclerView.Adapter mAdapter;
+    //  private RecyclerView.LayoutManager mLayoutManager;
+    private ArrayList<Contact> contacts = new ArrayList<Contact>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +35,7 @@ private ArrayList<Contact> contacts = new ArrayList<Contact>();
         mDrawerLayout = findViewById(R.id.drawer_layout);
         mRecyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
         mRecyclerView.setHasFixedSize(true);
-       // mLayoutManager = new LinearLayoutManager(this);
+        // mLayoutManager = new LinearLayoutManager(this);
         contacts = Contact.createContactList();
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
 
@@ -49,7 +48,7 @@ private ArrayList<Contact> contacts = new ArrayList<Contact>();
                 new NavigationView.OnNavigationItemSelectedListener() {
                     @Override
                     public boolean onNavigationItemSelected(MenuItem menuItem) {
-                       // menuItem.setChecked(true);
+                        // menuItem.setChecked(true);
                         mDrawerLayout.closeDrawers();
                         switch (menuItem.getItemId()) {
                             case R.id.house:
@@ -97,8 +96,8 @@ private ArrayList<Contact> contacts = new ArrayList<Contact>();
     }
 
     public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.ViewHolder> {
-       private ArrayList<Contact> mContacts;
-       private Context mContext;
+        private ArrayList<Contact> mContacts;
+        private Context mContext;
 
 
         public class ViewHolder extends RecyclerView.ViewHolder {
@@ -127,7 +126,7 @@ private ArrayList<Contact> contacts = new ArrayList<Contact>();
         public ContactsAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             Context context=parent.getContext();
             LayoutInflater inflater= LayoutInflater.from(context);
-                   View contactView=inflater.inflate(R.layout.contact_rv_card, parent, false);
+            View contactView=inflater.inflate(R.layout.contact_rv_card, parent, false);
             ViewHolder vh = new ViewHolder(context,contactView);
 
             return vh;
@@ -135,18 +134,18 @@ private ArrayList<Contact> contacts = new ArrayList<Contact>();
 
         @Override
         public void onBindViewHolder(ContactsAdapter.ViewHolder holder, int position) {
-        Contact contact=mContacts.get(position);
-        TextView textView=holder.mTextView1;
-        textView.setText(contact.getPost());
+            Contact contact=mContacts.get(position);
+            TextView textView=holder.mTextView1;
+            textView.setText(contact.getPost());
 
             TextView textView1=holder.mTextView2;
             textView1.setText(contact.getmName());
             ImageView imageView1=holder.mImageView;
-imageView1.setClipToOutline(true);
+            imageView1.setClipToOutline(true);
             imageView1.setImageResource(contact.getPic());
-           if(position%2==0)
-           {holder.itemView.setBackgroundColor(Color.parseColor("#EEEEEE"));
-             }
+            if(position%2==0)
+            {holder.itemView.setBackgroundColor(Color.parseColor("#EEEEEE"));
+            }
         }
 
         @Override
@@ -155,4 +154,3 @@ imageView1.setClipToOutline(true);
         }
     }
 }
-

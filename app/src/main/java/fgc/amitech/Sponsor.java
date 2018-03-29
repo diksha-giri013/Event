@@ -15,8 +15,8 @@ public class Sponsor {
     private String mname;
     private int mpic;
     private int mcrown;
-  //  private int mwhtsapp;
-  //  private int mcall;
+    //  private int mwhtsapp;
+    //  private int mcall;
 
     public Sponsor(String head,String post, String name, int pic,int crown) {
         mhead = head;
@@ -24,7 +24,7 @@ public class Sponsor {
         mname = name;
         mpic = pic;
         mcrown = crown;
-     //   mwhtsapp = whtsapp;
+        //   mwhtsapp = whtsapp;
         //mcall = call;
     }
     public String getHead() {
@@ -45,13 +45,13 @@ public class Sponsor {
         return mcrown;
     }
 
-   // public int getWhtsapp() {
-       // return mwhtsapp;
-   // }
+    // public int getWhtsapp() {
+    // return mwhtsapp;
+    // }
 
-   // public int getCall() {
-      //  return mcall;
- //   }
+    // public int getCall() {
+    //  return mcall;
+    //   }
 
     public static ArrayList<Sponsor>createSponsorList(){
         Sponsor sponsor_card;
@@ -61,8 +61,8 @@ public class Sponsor {
         String[] spoName;
         int[] picture;
         int[] crown;
-       // int whatsapp;
-       // int call;
+        // int whatsapp;
+        // int call;
         ArrayList<Sponsor> sponsors=new ArrayList<Sponsor>();
         spoHead = new String[]{
                 "Title sponsor",
@@ -116,5 +116,4 @@ public class Sponsor {
 
         }
         return sponsors;
-        }}
-
+    }}
