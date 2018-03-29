@@ -267,11 +267,13 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         switch(adapterView.getSelectedItemPosition()) {
             case 0: break;
             case 1: startActivity(new Intent(MainActivity.this, EventActivity.class));
-                finish(); break;
+                 break;
             case 2:
                 startActivity(new Intent(MainActivity.this, Contact_activity.class));
-                finish();break;
+               break;
         }
+        ((TextView) view).setTextColor(Color.WHITE);
+        ((TextView) view).setTextSize(20);
     }
 
     @Override
