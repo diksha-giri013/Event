@@ -176,7 +176,6 @@ public class MainActivity extends AppCompatActivity  implements AdapterView.OnIt
         adapter.setDropDownViewResource(android.R.layout.simple_list_item_activated_1);
 // Apply the adapter to the spinner
         spinner.setAdapter(adapter);
-
         spinner.setOnItemSelectedListener(this);
         /*RecyclerView rv=(RecyclerView)findViewById(R.id.mainRecycle);
         rv.setHasFixedSize(true);
@@ -227,6 +226,9 @@ public class MainActivity extends AppCompatActivity  implements AdapterView.OnIt
              startActivity(new Intent(MainActivity.this, Contact_activity.class));
              finish();break;
      }
+        ((TextView) view).setTextColor(Color.WHITE);
+        ((TextView) view).setTextSize(20);
+
     }
 
     @Override
