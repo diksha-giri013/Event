@@ -148,7 +148,9 @@ public class SponsorActivity extends AppCompatActivity {
 
             ImageView imageView1=holder.mImageView;
             imageView1.setClipToOutline(true);
+           // imageView1.setPadding(10,0,10,0);
 
+            //imageView1.setClipBounds(0,0,0,0);
             imageView1.setImageResource(sponsor.getPic());
             ImageView imageView2=holder.mImageView1;
 

@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private RecyclerView.ViewHolder viewHolder;
     List<event> eventList;
 
-    String change_text[] = {"is here", "have fun!!", "it is fun!!", "Let's explore", "let's do it", "Let's participate"};
+    String change_text[] = {"is here", "have fun!!", "it's about to begin! ", "Let's explore", "Let's party", "Let's participate"};
     private TextSwitcher mSwitcher;
     private int mCounter = 0;
     private DrawerLayout mDrawerLayout;
@@ -135,6 +135,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
                             case R.id.events: //i=new Intent(MainActivity.this,EventActivity.class);
                                 startActivity(new Intent(MainActivity.this,EventActivity.class));  break;
+                            case R.id.developer: //i=new Intent(MainActivity.this,EventActivity.class);
+                                startActivity(new Intent(MainActivity.this,DeveloperActivity.class));  break;
                             //    newGame();
                             //   return true;
                             //default:

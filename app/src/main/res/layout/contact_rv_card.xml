@@ -28,7 +28,7 @@
         android:layout_alignStart="@+id/textView1"
         android:layout_alignBottom="@+id/imageView"
         android:background="@null"
-        android:drawableStart="@drawable/iconwhatsapp"
+        android:drawableStart="@drawable/ic_whatsapp"
         android:textColor="#424242"
 
         />

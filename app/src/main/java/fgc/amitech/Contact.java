@@ -58,7 +58,7 @@ public class Contact {
                 "Transport Director"
         };
         conName = new String[]{
-                "PAYAL JOSHI",
+                "SOMEONE",
                 "Oh yes I am",
                 "I am here",
                 "present",
@@ -71,7 +71,8 @@ public class Contact {
                 R.drawable.ic_launcher_foreground,
                 R.drawable.ic_navigate_before,
                 R.drawable.ic_launcher_foreground,
-                R.drawable.logoford
+                R.drawable.ic_launcher_foreground
+
         };
 
         for (int i = 0; i < 6; i++) {

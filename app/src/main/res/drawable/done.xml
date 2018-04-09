@@ -4,51 +4,58 @@
     <aapt:attr name="android:drawable">
         <vector
             android:name="vector"
-            android:width="900dp"
-            android:height="500dp"
-            android:viewportWidth="900"
-            android:viewportHeight="500">
+            android:width="300dp"
+            android:height="100dp"
+            android:viewportWidth="200"
+            android:viewportHeight="80">
             <group
                 android:name="main"
                 android:rotation="90"/>
             <path
                 android:name="2"
-                android:pathData="M 8 63.16 C 10 50.16 19 40.16 31 37.16 C 43 34.16 44 34.16 52 40.16 C 60 46.16 58 57.16 58 62.16 C 58 67.16 56 77.16 41 91.16 L 36 95.16 L 29 100.16 C 20 106.16 2 109.16 2 111.16 C 2 113.16 27 111.16 63 106.16 L 86 103.16"
+                android:pathData="M 11 10 L 17 5 C 19.405 3.545 22.193 2.848 25 3 C 27.58 3.279 30.018 4.324 32 6 C 33 7 35 9 36 12 C 37 15 35 18 34 19 L 28 24 L 20 29 L 13 32 L 7 38 C 3 42 2 43 2 44 C 2 45 6 43 13 43 L 37 43"
                 android:strokeColor="#000000"
-                android:strokeWidth="10"/>
+                android:strokeWidth="7"
+                android:strokeLineCap="round"
+                />
             <path
                 android:name="0"
-                android:pathData="M 147.42 30.086 C 136.389 24.069 124.354 28.08 119.34 30.086 C 101.437 36.132 88.326 51.557 85.243 70.2 C 84.24 73.209 81.231 95.271 94.269 103.294 C 107.306 111.317 128.366 99.283 136.389 94.269 C 144.411 89.254 157.449 82.234 161.46 68.194 C 165.471 54.154 161.46 37.106 147.42 30.086 Z"
                 android:strokeColor="#000000"
-                android:strokeWidth="10"
-                android:trimPathOffset="1"/>
+                android:pathData="M 71 5 C 68 4 65 5 63 6 L 56 11 L 51 18 C 49.411 20.771 48.391 23.83 48 27 C 48 30 47 33 49 37 C 50.558 39.548 53.085 41.353 56 42 C 60 43 64 40 68 38 C 70.745 36.118 73.118 33.745 75 31 C 76.837 28.25 78.19 25.206 79 22 C 80 19 80 17 80 14 C 80 11 75 6 71 5 Z"
+                android:strokeWidth="7"
+                android:strokeLineCap="round"
+                />
             <path
                 android:name="1"
-                android:pathData="M 170.486 39.111 C 180.404 34.404 189.814 28.692 198.566 22.063 C 207.591 15.043 211.603 11.031 213.609 12.034 C 215.614 13.037 207.591 28.08 204.583 50.143 C 203.58 54.154 201.574 69.197 200.571 78.223 C 198.566 93.266 197.563 94.269 198.566 95.271 C 199.569 96.274 232.663 83.237 230.657 79.226 C 228.651 75.214 215.614 78.223 162.463 93.266"
+                android:pathData="M 90 7 L 97 5 L 106 5 C 107 6 103 14 98 24 L 92 33 L 89 42"
                 android:strokeColor="#000000"
-                android:strokeWidth="10"/>
+                android:strokeWidth="7"
+                android:strokeLineCap="round"/>
             <path
                 android:name="8"
-                android:pathData="M 297.849 31.089 C 300.857 20.057 292.834 5.014 278.794 1.003 C 264.754 -3.009 244.697 10.029 243.694 21.06 C 242.691 32.091 251.717 36.103 264.754 45.129 C 264.754 45.129 270.771 49.14 297.849 63.18 C 298.851 79.226 298.851 80.229 297.849 83.237 C 296.846 86.246 270.771 99.283 255.729 91.26 C 240.686 83.237 239.683 78.223 241.689 69.197 C 243.694 60.171 291.831 52.149 297.849 31.089 Z"
+                android:pathData="M 142 8 C 139.964 6.414 137.553 5.381 135 5 C 131.969 4.398 128.825 4.747 126 6 C 123 7 120 8 119 11 C 118.364 13.372 118.726 15.901 120 18 L 123 21 L 126 24 L 133 29 C 135 31 136 33 136 35 C 136 37 131 41 129 42 C 126.284 43.595 123.136 44.295 120 44 C 119 44 115 43 113 41 C 111 39 113 30 114 30 C 115 30 118 24 133 18 L 148 12"
                 android:strokeColor="#000000"
-                android:strokeWidth="10"/>
+                android:strokeWidth="7"
+                android:strokeLineCap="round"/>
             <path
                 android:name="line"
-                android:pathData="M 352.003 11.031 L 339.969 61.174"
+                android:pathData="M 167 1 L 164 7 L 157 26 L 154 33"
                 android:strokeColor="#000000"
-                android:strokeWidth="10"/>
+                android:strokeWidth="7"
+                android:strokeLineCap="round"/>
             <path
                 android:name="dot"
-                android:pathData="M 335.957 75.214 C 340.971 72.206 347.991 75.214 348.994 79.226 C 349.997 83.237 338.966 92.263 334.954 90.257 C 330.943 88.251 330.943 79.226 335.957 75.214 Z"
+                android:pathData="M 151 43 L 148 46 C 148 47 153 49 154 48 C 155 47 153 43 151 43 Z"
                 android:strokeColor="#000000"
-                android:strokeWidth="10"/>
+                android:strokeWidth="7"
+                android:strokeLineCap="round"/>
         </vector>
     </aapt:attr>
     <target android:name="2">
         <aapt:attr name="android:animation">
             <objectAnimator
                 android:propertyName="trimPathEnd"
-                android:duration="400"
+                android:duration="500"
                 android:valueFrom="0"
                 android:startOffset="200"
                 android:valueTo="1"
@@ -60,8 +67,8 @@
         <aapt:attr name="android:animation">
             <objectAnimator
                 android:propertyName="trimPathEnd"
-                android:startOffset="392"
-                android:duration="408"
+                android:startOffset="500"
+                android:duration="500"
                 android:valueFrom="0"
                 android:valueTo="1"
                 android:valueType="floatType"
@@ -72,8 +79,8 @@
         <aapt:attr name="android:animation">
             <objectAnimator
                 android:propertyName="trimPathEnd"
-                android:startOffset="800"
-                android:duration="400"
+                android:startOffset="1000"
+                android:duration="500"
                 android:valueFrom="0"
                 android:valueTo="1"
                 android:valueType="floatType"
@@ -84,8 +91,8 @@
         <aapt:attr name="android:animation">
             <objectAnimator
                 android:propertyName="trimPathEnd"
-                android:startOffset="1200"
-                android:duration="400"
+                android:startOffset="1500"
+                android:duration="500"
                 android:valueFrom="0"
                 android:valueTo="1"
                 android:valueType="floatType"
@@ -96,8 +103,8 @@
         <aapt:attr name="android:animation">
             <objectAnimator
                 android:propertyName="trimPathEnd"
-                android:startOffset="1600"
-                android:duration="200"
+                android:startOffset="2000"
+                android:duration="500"
                 android:valueFrom="0"
                 android:valueTo="1"
                 android:valueType="floatType"
@@ -108,8 +115,8 @@
         <aapt:attr name="android:animation">
             <objectAnimator
                 android:propertyName="trimPathEnd"
-                android:startOffset="1800"
-                android:duration="200"
+                android:startOffset="2500"
+                android:duration="500"
                 android:valueFrom="0"
                 android:valueTo="1"
                 android:valueType="floatType"

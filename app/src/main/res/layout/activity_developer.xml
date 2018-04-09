@@ -16,7 +16,7 @@
             xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context="fgc.amitech.Contact_activity"
+            tools:context="fgc.amitech.DeveloperActivity"
             android:orientation="vertical"
             >
 
@@ -41,6 +41,7 @@
             </android.support.design.widget.AppBarLayout>
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/my_recycler_view"
+                android:paddingRight="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 />

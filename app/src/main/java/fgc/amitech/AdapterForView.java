@@ -17,8 +17,8 @@ class AdapterForView extends PagerAdapter{
     private LayoutInflater layoutInflater;
     public String[] heading={
             "Participate And Win Exciting Goodies",
-            "Two Liner Highlight Text",
-            "Two Liner Highlight Text"
+            "Join Us In The Celebrations",
+            "Play Your Competition Like A Violin"
     };
     public String[] number_text={
             "50+",
@@ -27,13 +27,13 @@ class AdapterForView extends PagerAdapter{
     };
     public String[] number_text2={
             "Fun Filled Events",
-            "Participations",
+            "Participants",
             "Spectacular Prizes"
     };
     public String[] list_text={
             "Enjoy to your fullest while gaining creative intellect by being a part of them!",
-            "Enjoy to your fullest while gaining creative intellect by being a part of them!",
-            "Enjoy to your fullest while gaining creative intellect by being a part of them!"
+            "Let your hair down and thrive in the fun-filled events!",
+            "The prizes you win will only be secondary to the bragging rights you earn!"
     };
     public AdapterForView(Context mCtx) {
     this.mCtx=mCtx;

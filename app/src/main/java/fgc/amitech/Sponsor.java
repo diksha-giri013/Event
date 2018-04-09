@@ -66,37 +66,48 @@ public class Sponsor {
         ArrayList<Sponsor> sponsors=new ArrayList<Sponsor>();
         spoHead = new String[]{
                 "Title sponsor",
-                "power sponsor",
-                "associate sponsor",
-                "food partner",
-                "Social Media sponsor",
-                "Event sponsor"
+                "Power sponsor",
+                "Associate sponsor",
+                "Associate sponsor",
+                "Drinks partner",
+                "Desserts partner",
+                "Technology partner",
+                "Event sponsor",
+                "Clarity partner"
         };
         spoPost = new String[]{
 
-                "Ford",
                 "Vivo",
-                "UrbanClap",
-                "Coca Cola",
+                "ACE Academy",
+                "Kreatryx",
+                "Dena bank",
+                "Pepsi",
+                "Baskin Robbins",
                 "Feels Goods Creations",
-                "Canvas Laugh Club"
+                "Worlds of wonder",
+                "Lenskart"
         };
         spoName = new String[]{
-
-                "Built to Last",
                 "Camera & Music",
-                "Your Service expert",
-                "Taste the feeling",
-                "I3DEA",
-                "You need some CLC!"
+                "Engineering Academy",
+                "GATE/PSU/SSC Preparation Simplified",
+                "Dena hai toh Bharosa hai",
+                "",
+                "",
+                "Spreading happiness feels good",
+                "Place of wow moments",
+                "Spexy is the new sexy"
         };
         picture=new int[]{
-                R.drawable.logoford,
-                R.drawable.snowy,
-                R.drawable.ic_launcher_foreground,
-                R.drawable.ic_navigate_before,
-                R.drawable.ic_launcher_foreground,
-                R.drawable.ic_call_24dp
+                R.drawable.logo_vivo,
+                R.drawable.logo_ace_academy,
+                R.drawable.logo_kreatryx,
+                R.drawable.logo_dena_bank,
+                R.drawable.logo_pepsi,
+                R.drawable.logo_baskin_robbins,
+                R.drawable.logo_fgc,
+                R.drawable.logo_wow,
+                R.drawable.logo_lenskart
         };
         crown=new int[]{
 
@@ -106,11 +117,14 @@ public class Sponsor {
                 Color.parseColor("#795548"),
                 Color.parseColor("#2E7D32"),
                 Color.parseColor("#FBC02D"),
+                Color.parseColor("#FBC02D"),
+                Color.parseColor("#FBC02D"),
+                Color.parseColor("#FBC02D"),
                 Color.parseColor("#FBC02D")
 
         };
 
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < 9; i++) {
             sponsor_card = new Sponsor(spoHead[i],spoPost[i], spoName[i],picture[i],crown[i]);
             sponsors.add(sponsor_card);
 
