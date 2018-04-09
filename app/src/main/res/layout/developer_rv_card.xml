@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content" android:layout_height="wrap_content"
+     >
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="13dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="13dp"
+        android:background="@drawable/dev_frame"
+        android:cropToPadding="true"
+        android:elevation="8dp"
+        android:padding="20dp"
+        android:scaleType="centerCrop"
+
+        android:src="@drawable/snowy" />
+
+    <TextView
+        android:id="@+id/textView0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView"
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_alignEnd="@+id/imageView"
+        android:background="#bf00894e"
+        android:elevation="8dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="@string/dev_post"
+        android:textAllCaps="true"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textColor="#ffffff"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="4dp"
+        android:padding="5dp"/>
+
+
+    <!--<TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView0"
+        android:layout_below="@+id/textView0"
+        android:fontFamily="@font/oxygen"
+        android:layout_marginTop="3dp"
+        android:text="developer"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="#616161" />-->
+
+    />
+
+
+</RelativeLayout>
