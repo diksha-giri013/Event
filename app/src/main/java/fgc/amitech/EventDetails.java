@@ -316,9 +316,9 @@ public class EventDetails {
         };
 
         desc = new String[]{
-                "This event does not feature bows and arrows sadly but you can still have fun! Participate and find stupidity!",
-                "This event does not feature bows and arrows sadly but you can still have fun! Participate and find stupidity!",
-                "This event does not feature bows and arrows sadly but you can still have fun! Participate and find stupidity!"
+                "This event does not feature bows and arrows sadly but you can still get lucky! ",
+                "This event does not feature bows and arrows sadly but you can still get lucky! ",
+                "This event does not feature bows and arrows sadly but you can still get lucky! "
         };
 
         cat = new String[]{

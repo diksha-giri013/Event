@@ -1,7 +1,5 @@
 package fgc.amitech;
 
-import android.graphics.Color;
-
 import java.util.ArrayList;
 
 /**
@@ -64,23 +62,23 @@ public class Develop {
 
                 "Payal joshi\nDeveloper",
                 "Diksha giri\nDeveloper",
-                "UrbanClap\nDeveloper",
-                "Coca Cola\nDeveloper",
-                "random\nDeveloper",
-                "wow\nDeveloper"
+                //"UrbanClap\nDeveloper",
+                //"Coca Cola\nDeveloper",
+                //"random\nDeveloper",
+                //"wow\nDeveloper"
         };
 
         picture=new int[]{
-                R.drawable.snowy,
-                R.drawable.snowy,
-                R.drawable.snowy,
-                R.drawable.snowy,
-                R.drawable.snowy,
-                R.drawable.snowy
+                R.drawable.dev_payal,
+                //R.drawable.snowy,
+                //R.drawable.snowy,
+                //R.drawable.snowy,
+                //R.drawable.snowy,
+                R.drawable.dev_diksha
         };
 
 
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < picture.length; i++) {
             sponsor_card = new Develop(spoPost[i],picture[i]);
             develops.add(sponsor_card);
 

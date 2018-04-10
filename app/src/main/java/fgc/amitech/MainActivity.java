@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
@@ -123,7 +124,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
                             case R.id.contact:
                                 // i=new Intent(MainActivity.this,Contact_activity.class);
-                                startActivity(new Intent(MainActivity.this,Contact_activity.class));  break;
+                                //startActivity(new Intent(MainActivity.this,Contact_activity.class));  break;
+                                Snackbar snackbar = Snackbar.make(findViewById(R.id.dash_rv_catlist),R.string.snack,Snackbar.LENGTH_SHORT);
+                                snackbar.show();
+                                break;
                             //Fragment fragment = new ContactActivity();
                             // fragmentTransaction.add(R.id.mainArea, fragment);
                             // fragmentTransaction.commit();break;
