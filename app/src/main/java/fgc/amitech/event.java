@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class event {
     private String mhead;
-
+    private static ArrayList<EventDetails> list;
     public event(String head)
     {
         mhead = head;
@@ -20,6 +20,7 @@ public class event {
         event event_card;
         String[] spoHead;
 
+        list = EventDetails.makeEventData();
         ArrayList<event> events=new ArrayList<event>();
         spoHead = new String[]{
                 "Argumentum",
@@ -44,8 +45,8 @@ public class event {
                 "Rumble Jumble",
                 "You Me Mad"
         };
-        for (int i = 0; i < 21; i++) {
-            event_card = new event(spoHead[i]);
+        for (int i = 0; i < list.size(); i++) {
+            event_card = new event(list.get(i).getCard_title());
             events.add(event_card);
 
         }

@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Amitech</string>
-    <string name="title_activity_main">MainActivity</string>
+    <string name="app_name">Amitech 2018</string>
+    <string name="title_activity_main">Amitech</string>
     <string name="event_description">Welcome to the world of logical reasoning and brilliant articulation.
         Leave your mark as the best debater and critical thinker.</string>
     <string name="snack">We are currently adding more people!</string>
