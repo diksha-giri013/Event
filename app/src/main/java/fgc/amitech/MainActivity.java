@@ -137,7 +137,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                                 startActivity(new Intent(MainActivity.this,SponsorActivity.class));  break;
 
                             case R.id.events: //i=new Intent(MainActivity.this,EventActivity.class);
-                                startActivity(new Intent(MainActivity.this,EventActivity.class));  break;
+                                Snackbar snackbar2 = Snackbar.make(findViewById(R.id.dash_rv_catlist),"Updates in progress!",Snackbar.LENGTH_SHORT);
+                                snackbar2.show();
+                                break;
+                                //startActivity(new Intent(MainActivity.this,EventActivity.class));  break;
                             case R.id.developer: //i=new Intent(MainActivity.this,EventActivity.class);
                                 startActivity(new Intent(MainActivity.this,DeveloperActivity.class));  break;
                             //    newGame();
