@@ -6,34 +6,23 @@
     android:layout_height="match_parent"
     tools:context="fgc.amitech.SplashScreen">
 
-    <TextView
+    <ImageView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="228dp"
-        android:fontFamily="@font/noto_sans_bold"
-        android:text="AMITECH"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-        android:textColor="@color/colorPrimary"
-        android:textSize="50sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.366"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.36" />
+        android:layout_height="300dp"
+        android:layout_centerVertical="true"
+
+        android:src="@drawable/logo" />
 
     <ImageView
         android:id="@+id/aniImage"
-        android:layout_width="150dp"
+
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/textView"
+        android:layout_marginTop="-50dp"
         android:layout_below="@+id/textView"
-        android:layout_marginTop="8dp"
-        android:contentDescription="TODO"
+        android:layout_centerHorizontal="true"
         android:cropToPadding="true"
-        app:srcCompat="@drawable/done" />
+        android:src="@drawable/done" />
 
 </RelativeLayout>
