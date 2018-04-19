@@ -40,7 +40,6 @@ import static fgc.amitech.EventDetails.makeCultData;
 import static fgc.amitech.EventDetails.makeEventData;
 import static fgc.amitech.EventDetails.makeFunData;
 import static fgc.amitech.EventDetails.makeLitData;
-import static fgc.amitech.EventDetails.makeSponData;
 import static fgc.amitech.EventDetails.makeTechData;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
@@ -139,7 +138,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                                 startActivity(new Intent(MainActivity.this,SponsorActivity.class)); finish(); break;
 
                             case R.id.events: //i=new Intent(MainActivity.this,EventActivity.class);
-                                startActivity(new Intent(MainActivity.this,EventActivity.class));  break;
+                                Snackbar snackbar2 = Snackbar.make(findViewById(R.id.dash_rv_catlist),"Updates in progress!",Snackbar.LENGTH_SHORT);
+                                snackbar2.show();
+                                break;
+                                //startActivity(new Intent(MainActivity.this,EventActivity.class));  break;
                             case R.id.developer: //i=new Intent(MainActivity.this,EventActivity.class);
                                 startActivity(new Intent(MainActivity.this,DeveloperActivity.class));  break;
                             //    newGame();
@@ -217,9 +219,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             case "CULTURAL":
                 eventCard = makeCultData();
                 break;
-            case "SPONSORED":
-                eventCard = makeSponData();
-                break;
+            //case "SPONSORED":
+                //eventCard = makeSponData();
+                //break;
             case "LITERARY":
                 eventCard = makeLitData();
                 break;
@@ -276,11 +278,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         // String item=adapterView.getItemAtPosition(i).toString();
         switch(adapterView.getSelectedItemPosition()) {
             case 0: break;
-            case 1: startActivity(new Intent(MainActivity.this, EventActivity.class));
-                 break;
+            //case 1: startActivity(new Intent(MainActivity.this, EventActivity.class));
+                 //break;
             case 2:
-                startActivity(new Intent(MainActivity.this, Contact_activity.class));
-               break;
+                //startActivity(new Intent(MainActivity.this, Contact_activity.class));
+               //break;
         }
         ((TextView) view).setTextColor(Color.WHITE);
         ((TextView) view).setTextSize(20);
@@ -530,9 +532,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     case "CULTURAL":
                         eventCard = makeCultData();
                         break;
-                    case "SPONSORED":
-                        eventCard = makeSponData();
-                        break;
+                    //case "SPONSORED":
+                        //eventCard = makeSponData();
+                        //break;
                     case "LITERARY":
                         eventCard = makeLitData();
                         break;

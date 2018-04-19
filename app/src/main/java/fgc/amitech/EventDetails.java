@@ -196,7 +196,7 @@ public class EventDetails {
         EventCard.addAll(makeTechData());
         EventCard.addAll(makeFunData());
         EventCard.addAll(makeCultData());
-        EventCard.addAll(makeSponData());
+        //EventCard.addAll(makeSponData());
         EventCard.addAll(makeLitData());
         for(int i=0; i<EventCard.size(); i++){
             event_card=EventCard.get(i);
@@ -228,20 +228,23 @@ public class EventDetails {
 
         title = new String[]{
                 //BEST OF AMITECH
-                "Argumentum",
-                "Battle Of Bands",
                 "Technovation",
-                "Sherlock Quiz"
+                "Pixel Jones",
+                "Allegro",
+                "JAM Session",
+                "Stepping Up"
                 };
 
         desc = new String[]{
-                "Welcome to the world of logical reasoning and brilliant articulation. Leave your mark as the best debtor and critical thinker.",
-                "Present your ideas and arguments logically. Be a part of this brilliant event and win prizes worth up to 40000!",
-                "Present your ideas and arguments logically. Be a part of this brilliant event and win prizes worth up to 40000!",
-                "Present your ideas and arguments logically. Be a part of this brilliant event and win prizes worth up to 40000!"
+                "I3DEA. Witness the rise of disruptive dreams in this unique pitching event as a part of TDC 2018!",
+                "Visualise the unavowed. An event to showcase your digital expertise skills.",
+                "A melodious voice is pleasing, a melodious harmony is spell binding. ",
+                "Let Your Hair Down and loose yourself in the elated atmosphere !",
+                "Showcase your talent and take your passion to the next level. Win prizes worth 2000!"
         };
 
         cat = new String[]{
+                "BEST OF AMITECH",
                 "BEST OF AMITECH",
                 "BEST OF AMITECH",
                 "BEST OF AMITECH",
@@ -249,30 +252,34 @@ public class EventDetails {
          };
 
         teamsize = new String[]{
-                "2-4 Members",
-                "3-8 Members",
                 "2-5 Members",
+                "1-3 Members",
+                "2-5 Members",
+                "Free For All Event",
                 "Individual Participation"
         };
 
         rule = new String[]{"Rules are very important for any event read them. \nEach member can present one argument.\nCross questioning is not allowed, chill life.\nBring your own pen and paper.",
+                "Rules are very important for any event read them. \nEach member can present one argument.",
                 "Rules are very important for any event read them. \nEach member can present one argument.",
                 "Rules are very important for any event read them. \nEach member can present one argument.Rules are very important for any event read them. \nEach member can present one argument.",
                 "Rules are very important for any event read them. \nEach member can present one argument."
         };
 
         date = new String[]{
-                "25 April 2018",
-                "26 April 2018",
-                "25 April 2018",
-                "25 April 2018"
+                "21 April 2018",
+                "21 April 2018",
+                "21 April 2018",
+                "21-22 April 2018",
+                "22 April 2018"
         };
 
         loc = new String[]{
-                "Hall-2B",
-                "Main Stage",
-                "Auditorium",
-                "Booth 3"
+                "Moot Court",
+                "Classroom 1",
+                "Moot Court",
+                "Moot Court",
+                "Moot Court"
         };
 
         pos = new int[]{
@@ -280,12 +287,14 @@ public class EventDetails {
                 2,
                 3,
                 4,
+                5
         };
         image = new int[]{
                 R.drawable.event_img5,
                 R.drawable.event_img6,
                 R.drawable.event_img1,
-                R.drawable.event_img2
+                R.drawable.event_img2,
+                R.drawable.event_img6
         };
 
         for (int i = 0; i < pos.length; i++) {
@@ -310,18 +319,27 @@ public class EventDetails {
         int[] image;
 
         title = new String[]{
-                "Stupid Cupid",
-                "Tambola",
-                "Beg Borrow Steal"
+                "Cook Without Fire",
+                "Let's Bounce",
+                "JAM Session",
+                "Metal Strength",
+                "Mate In Two",
+                "Bull's Eye"
         };
 
         desc = new String[]{
-                "This event does not feature bows and arrows sadly but you can still get lucky! ",
-                "This event does not feature bows and arrows sadly but you can still get lucky! ",
-                "This event does not feature bows and arrows sadly but you can still get lucky! "
+                "Food is life, cooking is fun. Young learners tried their hand in doing just that WITHOUT fire! ",
+                "Chill out and test your balance in this event featuring Zorbin ",
+                "Let Your Hair Down and loose yourself in the elated atmosphere ! ",
+                "Put your strength to test in this push up event",
+                "Defeat your opponent with the given chess setup in two moves.",
+                "How good are you with your aim? Find out in this dar game. "
         };
 
         cat = new String[]{
+                "FUN",
+                "FUN",
+                "FUN",
                 "FUN",
                 "FUN",
                 "FUN"
@@ -329,37 +347,56 @@ public class EventDetails {
 
         teamsize = new String[]{
                 "Individual Participation",
-                "2 Members",
+                "Individual Participation",
+                "Free For All Event",
+                "Individual Participation",
+                "Individual Participation",
                 "Individual Participation"
         };
 
         rule = new String[]{
-                "Rules are very important for any event read them. \nEach member can present one argument.",
-                "Rules are very important for any event read them. \nEach member can present one argument.",
-                "Rules are very important for any event read them. \nEach member can present one argument."
+                "Rules are very important for any event read them. \n The rules for this event are coming soon.",
+                "Rules are very important for any event read them. \n The rules for this event are coming soon.",
+                "Rules are very important for any event read them. \n The rules for this event are coming soon.",
+                "Rules are very important for any event read them. \n The rules for this event are coming soon.",
+                "Rules are very important for any event read them. \n The rules for this event are coming soon.",
+                "Rules are very important for any event read them. \n The rules for this event are coming soon."
         };
 
         date = new String[]{
-                "26 April 2018",
-                "25 April 2018",
-                "25 April 2018"
+                "21 April 2018",
+                "22 April 2018",
+                "21-22 April 2018",
+                "21-22 April 2018",
+                "21-22 April 2018",
+                "21-22 April 2018"
         };
 
         loc = new String[]{
-                "Ground",
-                "Booth 5",
-                "Booth 8"
+                "Classroom 1",
+                "Classroom 3",
+                "Moot Court",
+                "Lobby",
+                "Lobby",
+                "Lobby"
         };
 
         pos = new int[]{
                 1,
                 2,
-                3
+                3,
+                4,
+                5,
+                6
         };
         image = new int[]{
                 R.drawable.event_img3,
                 R.drawable.event_img4,
-                R.drawable.event_img5
+                R.drawable.event_img5,
+                R.drawable.event_img4,
+                R.drawable.event_img3,
+                R.drawable.event_img4
+
         };
 
         for (int i = 0; i < pos.length; i++) {
@@ -385,20 +422,29 @@ public class EventDetails {
 
         title = new String[]{
 
-                "Kalakaari",
-                "Fashion Fingers",
+                "Alaap",
+                "Haste Raho",
                 "Serenade",
-                "Natraj"
+                "Allegro",
+                "Bhaavnayein",
+                "Natraj",
+                "Stepping Up"
         };
 
         desc = new String[]{
-                "Showcase your talent and take your passion to the next level. Win prizes worth 50000!",
-                "Showcase your talent and take your passion to the next level. Win prizes worth 50000!",
-                "Showcase your talent and take your passion to the next level. Win prizes worth 50000!",
-                "Showcase your talent and take your passion to the next level. Win prizes worth 50000!"
+                "Witness the mastery of musical notes in this Solo Indian singing event by Decibel. ",
+                "Fodder for your funny bone from some of the best comedians and artists. ",
+                "Witness the mastery of musical notes in this Solo Western singing event by Decibel.",
+                "A melodious voice is pleasing, a melodious harmony is spell binding.",
+                "Showcase your talent and take your passion to the next level. Win prizes worth 2000!",
+                "Showcase your talent and take your passion to the next level. Win prizes worth 2000!",
+                "Showcase your talent and take your passion to the next level. Win prizes worth 2000!"
         };
 
         cat = new String[]{
+                "CULTURAL",
+                "CULTURAL",
+                "CULTURAL",
                 "CULTURAL",
                 "CULTURAL",
                 "CULTURAL",
@@ -406,31 +452,43 @@ public class EventDetails {
         };
 
         teamsize = new String[]{
-                "6-10 Members",
-                "3-8 Members",
-                "7-9 Members",
-                "2-5 Members"
+                "",
+                "Individual Participation",
+                "",
+                "",
+                "Individual Participation",
+                "Individual Participation",
+                ""
         };
 
         rule = new String[]{
-                "Rules are very important for any event read them. \nEach member can present one argument.",
-                "Rules are very important for any event read them. \nEach member can present one argument.",
-                "Rules are very important for any event read them. \nEach member can present one argument.",
-                "Rules are very important for any event read them. \nEach member can present one argument."
+                "Rules are very important for any event read them. \n The rules for this event are coming soon.",
+                "Rules are very important for any event read them. \n The rules for this event are coming soon.",
+                "Rules are very important for any event read them. \n The rules for this event are coming soon.",
+                "Rules are very important for any event read them. \n The rules for this event are coming soon.",
+                "Rules are very important for any event read them. \n The rules for this event are coming soon.",
+                "Rules are very important for any event read them. \n The rules for this event are coming soon.",
+                "Rules are very important for any event read them. \n The rules for this event are coming soon.",
         };
 
         date = new String[]{
-                "25 April 2018",
-                "26 April 2018",
-                "25 April 2018",
-                "25 April 2018"
+                "21 April 2018",
+                "21 April 2018",
+                "21 April 2018",
+                "21 April 2018",
+                "21 April 2018",
+                "22 April 2018",
+                "22 April 2018",
         };
 
         loc = new String[]{
-                "Hall-2B",
-                "Main Stage",
-                "Auditorium",
-                "Booth 3"
+                "Moot Court",
+                "Moot Court",
+                "Moot Court",
+                "Moot Court",
+                "Classroom 1",
+                "Moot Court",
+                "Moot Court"
         };
 
         pos = new int[]{
@@ -438,13 +496,19 @@ public class EventDetails {
                 1,
                 2,
                 3,
-                4
+                4,
+                5,
+                6,
+                7
         };
         image = new int[]{
                 R.drawable.event_img1,
                 R.drawable.event_img2,
                 R.drawable.event_img3,
-                R.drawable.event_img4
+                R.drawable.event_img4,
+                R.drawable.event_img1,
+                R.drawable.event_img2,
+                R.drawable.event_img3
         };
 
         for (int i = 0; i < pos.length; i++) {
@@ -475,8 +539,8 @@ public class EventDetails {
                };
 
         desc = new String[]{
-                "Showcase your talent and take your passion to the next level. Win prizes worth 50000!",
-                "Showcase your talent and take your passion to the next level. Win prizes worth 50000!"
+                "Showcase your talent and take your passion to the next level. Win prizes worth 5000!",
+                "Showcase your talent and take your passion to the next level. Win prizes worth 5000!"
         };
 
         cat = new String[]{
@@ -490,8 +554,8 @@ public class EventDetails {
         };
 
         rule = new String[]{
-                "Rules are very important for any event read them. \nEach member can present one argument.",
-                "Rules are very important for any event read them. \nEach member can present one argument."
+                "Rules are very important for any event read them. \n The rules for this event are coming soon.",
+                "Rules are very important for any event read them. \n The rules for this event are coming soon."
         };
 
         date = new String[]{
@@ -538,20 +602,23 @@ public class EventDetails {
 
         title = new String[]{
 
+                "Pixel Jones",
+                "LAN Gaming",
+                "Logo Mania",
                 "Technovation",
-                "Counter Strike",
-                "Mini Militia",
-                "Swish 'N' Click"
+                "Codesense"
         };
 
         desc = new String[]{
-                "Showcase your talent and take your passion to the next level. Win prizes worth 50000!",
-                "Showcase your talent and take your passion to the next level. Win prizes worth 50000!",
-                "Showcase your talent and take your passion to the next level. Win prizes worth 50000!",
-                "Showcase your talent and take your passion to the next level. Win prizes worth 50000!"
+                "Visualise the unavowed. An event to showcase your digital expertise skills.",
+                "Showcase your talent and take your passion to the next level. Win prizes worth 5000!",
+                "A quiz by SAE.",
+                "I3DEA. Witness the rise of disruptive dreams in this unique pitching event! ",
+                "Showcase your talent and take your passion to the next level. Win prizes worth 5000!"
         };
 
         cat = new String[]{
+                "TECHNICAL",
                 "TECHNICAL",
                 "TECHNICAL",
                 "TECHNICAL",
@@ -559,31 +626,35 @@ public class EventDetails {
         };
 
         teamsize = new String[]{
-                "6-10 Members",
-                "3-8 Members",
-                "7-9 Members",
-                "2-5 Members"
+                "1-3 Members",
+                "Individual Participation",
+                "Individual Participation",
+                "2-5 Members",
+                ""
         };
 
         rule = new String[]{
-                "Rules are very important for any event read them. \nEach member can present one argument.",
-                "Rules are very important for any event read them. \nEach member can present one argument.",
-                "Rules are very important for any event read them. \nEach member can present one argument.",
-                "Rules are very important for any event read them. \nEach member can present one argument."
+                "Rules are very important for any event read them. \n The rules for this event are coming soon.",
+                "Rules are very important for any event read them. \n The rules for this event are coming soon.",
+                "Rules are very important for any event read them. \n The rules for this event are coming soon.",
+                "Rules are very important for any event read them. \n The rules for this event are coming soon.",
+                "Rules are very important for any event read them. \n The rules for this event are coming soon.",
         };
 
         date = new String[]{
-                "25 April 2018",
-                "26 April 2018",
-                "25 April 2018",
-                "25 April 2018"
+                "21 April 2018",
+                "21-22 April 2018",
+                "21 April 2018",
+                "22 April 2018",
+                "22 April 2018"
         };
 
         loc = new String[]{
-                "Hall-2B",
-                "Main Stage",
-                "Auditorium",
-                "Booth 3"
+                "Classroom 1",
+                "Classroom 3",
+                "Classroom 2",
+                "Moot Court",
+                "Classroom 1"
         };
 
         pos = new int[]{
@@ -591,13 +662,15 @@ public class EventDetails {
                 1,
                 2,
                 3,
-                4
+                4,
+                5
         };
 
         image = new int[]{
                 R.drawable.event_img2,
                 R.drawable.event_img3,
                 R.drawable.event_img4,
+                R.drawable.event_img2,
                 R.drawable.event_img5
         };
 
@@ -624,67 +697,49 @@ public class EventDetails {
 
         title = new String[]{
 
-                "Ad Mad",
-                "Power To Her",
-                "Rumble Jumble",
-                "You Me Mad"
+                "Argumentum",
+                "The Golden Snitch"
         };
 
         desc = new String[]{
-                "Showcase your talent and take your passion to the next level. Win prizes worth 50000!",
-                "Showcase your talent and take your passion to the next level. Win prizes worth 50000!",
                 "Showcase your talent and take your passion to the next level. Win prizes worth 50000!",
                 "Showcase your talent and take your passion to the next level. Win prizes worth 50000!"
         };
 
         cat = new String[]{
                 "LITERARY",
-                "LITERARY",
-                "LITERARY",
                 "LITERARY"
         };
 
         teamsize = new String[]{
-                "6-10 Members",
-                "3-8 Members",
-                "7-9 Members",
-                "2-5 Members"
+                "2 Members",
+                "Individual Participation"
         };
 
         rule = new String[]{
-                "Rules are very important for any event read them. \nEach member can present one argument.",
-                "Rules are very important for any event read them. \nEach member can present one argument.",
-                "Rules are very important for any event read them. \nEach member can present one argument.",
-                "Rules are very important for any event read them. \nEach member can present one argument."
+                "Rules are very important for any event read them. \n The rules for this event are coming soon.",
+                "Rules are very important for any event read them. \n The rules for this event are coming soon."
         };
 
         date = new String[]{
-                "25 April 2018",
-                "26 April 2018",
-                "25 April 2018",
-                "25 April 2018"
+                "21 April 2018",
+                "21 April 2018",
         };
 
         loc = new String[]{
-                "Hall-2B",
-                "Main Stage",
-                "Auditorium",
-                "Booth 3"
+                "Classroom 2",
+                "Classroom 2"
         };
 
         pos = new int[]{
 
                 1,
-                2,
-                3,
-                4
+                2
         };
 
         image = new int[]{
                 R.drawable.event_img2,
-                R.drawable.event_img3,
-                R.drawable.event_img4,
-                R.drawable.event_img5
+                R.drawable.event_img3
         };
 
         for (int i = 0; i < pos.length; i++) {
