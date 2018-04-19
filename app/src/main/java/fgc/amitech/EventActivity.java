@@ -111,17 +111,17 @@ public class EventActivity extends AppCompatActivity {
 
     private ArrayList<FestEvent> getFestEvents(Context context){
         int i = 0;
-        String[] eventNames,eventVenue, eventTime, eventDate,eventcategory;
+        String[] eventNames,eventVenue, eventTime, eventDate,eventCategory;
         ArrayList<FestEvent> events = new ArrayList<>();
 
         eventNames = context.getResources().getStringArray(R.array.event_name);
         eventVenue = context.getResources().getStringArray(R.array.venue_array);
         eventTime = context.getResources().getStringArray(R.array.time_array);
         eventDate = context.getResources().getStringArray(R.array.date_array);
-        eventcategory = context.getResources().getStringArray(R.array.category_array);
+        eventCategory = context.getResources().getStringArray(R.array.category_array);
 
         while(i < eventNames.length){
-            events.add(new FestEvent(eventNames[i], eventVenue[i], eventTime[i], eventDate[i], R.drawable.event_img1, eventcategory[i]));
+            events.add(new FestEvent(eventNames[i], eventVenue[i], eventTime[i], eventDate[i], getResources().getIdentifier("pic_"+(i+1), "drawable", getPackageName()), eventCategory[i]));
             i++;
         }
 
@@ -179,17 +179,13 @@ public class EventActivity extends AppCompatActivity {
         public void onBindViewHolder(EventAdapter.ViewHolder holder, int position) {
 
             final FestEvent eve = mFestEvents.get(position);
-            TextView event = holder.mEvent;
-            TextView time = holder.mTime;
-            TextView venue = holder.mVenue;
-            TextView date = holder.mDate;
-            FloatingActionButton add = holder.mAdd;
-            event.setText(eve.getHead());
-            date.setText(eve.getEventDate());
-            time.setText(eve.getEventTime());
-            venue.setText(eve.getEventVenue());
+            holder.mEvent.setText(eve.getHead());
+            holder.mDate.setText(eve.getEventDate());
+            holder.mTime.setText(eve.getEventTime());
+            holder.mVenue.setText(eve.getEventVenue());
             if(eve.getEventCategory().compareToIgnoreCase("none") != 0)
                 holder.mEventCategory.setText(eve.getEventCategory());
+
             switch(eve.getEventCategory())
             {
                 case "Technical":
@@ -209,7 +205,7 @@ public class EventActivity extends AppCompatActivity {
                     holder.mAdd.setBackgroundTintList(getResources().getColorStateList(R.color.colorLiteraryDark));
                     break;
             }
-            add.setOnClickListener(new View.OnClickListener() {
+            holder.mAdd.setOnClickListener(new View.OnClickListener() {
                 @RequiresApi(api = Build.VERSION_CODES.M)
                 @Override
                 public void onClick(View view) {
@@ -239,6 +235,7 @@ public class EventActivity extends AppCompatActivity {
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+
                     FragmentManager fm = getFragmentManager();
                     EventDialogFragment dFragment = new EventDialogFragment(eve.getImageID());
                     dFragment.show(fm, "Event Poster");

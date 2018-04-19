@@ -59,6 +59,9 @@ public class Develop {
                "Associate Developer",
                 "Head Coordinator",
                "Coordinator",
+               "Coordinator",
+               "Coordinator",
+               "Coordinator",
                "Coordinator"
         };
         spoPost = new String[]{
@@ -71,7 +74,10 @@ public class Develop {
                 "Avinash",
                 "Mukul",
                 "Kunal",
-                "Akarshit"
+                "Akarshit",
+                "Anmol",
+                "Rishabh",
+                "Yash"
                 //"wow\nDeveloper"
         };
 
@@ -84,7 +90,10 @@ public class Develop {
                 R.drawable.app_avinash,
                 R.drawable.app_mukul,
                 R.drawable.app_kunal,
-                R.drawable.app_akarshit
+                R.drawable.app_akarshit,
+                R.drawable.app_anmol_gupta,
+                R.drawable.app_rishabh,
+                R.drawable.app_yash_wadhwa
         };
 
 

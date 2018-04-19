@@ -25,6 +25,9 @@ public class EventDialogFragment extends DialogFragment{
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 
+
+ //before
+
         final View rootView = inflater.inflate(R.layout.event_dialog_fragment, container,
                 false);
         ImageView eventImage = rootView.findViewById(R.id.event_dialog_fragment_imageView);

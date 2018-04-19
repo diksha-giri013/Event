@@ -20,11 +20,13 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.l4digital.fastscroll.FastScrollRecyclerView;
+
 import java.util.ArrayList;
 
 public class SponsorActivity extends AppCompatActivity {
     private DrawerLayout mDrawerLayout;
-    private RecyclerView mRecyclerView;
+    private FastScrollRecyclerView mRecyclerView;
 
     private ArrayList<Sponsor> sponsors = new ArrayList<Sponsor>();
 
@@ -33,7 +35,7 @@ public class SponsorActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sponsor);
         mDrawerLayout = findViewById(R.id.drawer_layout);
-        mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        mRecyclerView =  findViewById(R.id.recycler_view);
         mRecyclerView.setHasFixedSize(true);
         // mLayoutManager = new LinearLayoutManager(this);
         sponsors = Sponsor.createSponsorList();

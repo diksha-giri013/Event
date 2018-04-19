@@ -108,6 +108,7 @@ public class DeveloperActivity extends AppCompatActivity {
                 mTextView1 = v.findViewById(R.id.textView1);
                 mImageView = v.findViewById(R.id.imageView);
                 this.context = context;
+
             }
         }
         public DeveloperAdapter(Context context,ArrayList<Develop>develops){//*****
@@ -156,10 +157,7 @@ public class DeveloperActivity extends AppCompatActivity {
             //imageView1.setPadding(20,20,20,20);
             //imageView1.setClipBounds(2,2,2,2);
             imageView1.setImageResource(sponsor.getPic());
-            if(position>1)
-            {//imageView1.setBackground(null);
-                imageView1.setBackgroundColor(Color.parseColor("#ffffff"));
-            }
+
             // imageView2.setTint(sponsor.getCrown());
             //  imageView2.setColorFilter(getResources().getC);
             //  DrawableCompat.setTint(imageView2.getDrawable(),sponsor.getCrown());

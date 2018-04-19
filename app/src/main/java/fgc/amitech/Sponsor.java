@@ -67,31 +67,93 @@ public class Sponsor {
         spoHead = new String[]{
                 "Title sponsor",
                 "Power sponsor",
+                "Event sponsor",
+                "Associate sponsor",
+                "Coding Partner",
                 "Associate sponsor",
                 "Associate sponsor",
-                "Technology partner"
+                "Technology partner",
+                "Associate sponsor",
+                "Associate sponsor",
+                "Associate sponsor",
+                "Associate sponsor",
+                "Associate sponsor",
+                "Student Partner",
+                "Associate sponsor",
+                "Associate sponsor",
+                "Associate sponsor",
+                "Associate sponsor",
+                "Associate sponsor",
+                "Associate sponsor"
+
         };
         spoPost = new String[]{
                 "Garniche",
                 "Developing Success Institute",
+                "Canvas Laugh Club",
+                "ACE Academy",
+                "Coding Blocks",
+                "Gate Coach",
                 "Career Launcher",
-               "ACE Academy",
-                "Feels Goods Creations"
+                "Feels Goods Creations",
+                "Frapp",
+                "Rhapsody",
+                "OYO",
+                "LensKart",
+                "Smaash",
+                "Integer Innovation",
+                "Make my Trip",
+                "Udemy",
+                "Printvenue.com",
+                "GoDaddy",
+                "Zalonin",
+                "Thappa Chinese Corner"
         };
         spoName = new String[]{
                 "Chef at your Doorstep",
                 "One thing that matters to you and us, is your result and success",
-                "Helping the youth of the country achieve their career dreams",
+                "You need some CLC!",
                 "Engineering Academy",
-                "Spreading happiness feels good"
+                "Code your way to success",
+                "Best coaching institute for IES/GATE/PSU since 1997",
+                "Helping the youth of the country achieve their career dreams",
+                "Spreading happiness feels good",
+                "Students only",
+                "Nail Studio",
+                "On your own rooms",
+                "Spexy is the new sexy!",
+                "Can't Stop Playing",
+                "Learn.play.Innovate.",
+                "Dil toh roaming hai",
+                "",
+                "",
+                "It's Go time",
+                "Be the way you want to be",
+                ""
 
         };
         picture=new int[]{
                 R.drawable.logotitle_new,
                 R.drawable.logo_devloping_success,
+                R.drawable.clc,
+                R.drawable.logo_ace_academy,
+                R.drawable.logo_coding_blocks,
+                R.drawable.logo_gate_coach,
                 R.drawable.logo_career_launcher,
-                 R.drawable.logo_ace_academy,
-                R.drawable.fgc
+                R.drawable.fgc,
+                R.drawable.logo_frapp,
+                R.drawable.logo_rhapsody_nail_saloon,
+                R.drawable.logo_oyo,
+                R.drawable.logo_lenskart,
+                R.drawable.logo_smaash,
+                R.drawable.logo_integer_innovation,
+                R.drawable.logo_makemytrip,
+                R.drawable.logo_udemy,
+                R.drawable.logo_printvenue,
+                R.drawable.logo_godaddy,
+                R.drawable.zalonin,
+                R.drawable.logo_thapa_chinese_food
+
         };
         crown=new int[]{
 
@@ -99,13 +161,30 @@ public class Sponsor {
 
                 Color.parseColor("#FBC02D"),
                 Color.parseColor("#BDBDBD"),
+                Color.parseColor("#FBC02D"),
                 Color.parseColor("#795548"),
                 Color.parseColor("#795548"),
-                Color.parseColor("#FBC02D")
+                Color.parseColor("#795548"),
+                Color.parseColor("#795548"),
+                Color.parseColor("#795548"),
+                Color.parseColor("#795548"),
+                Color.parseColor("#795548"),
+                Color.parseColor("#795548"),
+                Color.parseColor("#795548"),
+                Color.parseColor("#795548"),
+                Color.parseColor("#795548"),
+                Color.parseColor("#795548"),
+                Color.parseColor("#795548"),
+                Color.parseColor("#795548"),
+                Color.parseColor("#795548"),
+                Color.parseColor("#795548"),
+                Color.parseColor("#795548"),
+                Color.parseColor("#795548"),
+
 
         };
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i <spoHead.length; i++) {
             sponsor_card = new Sponsor(spoHead[i],spoPost[i], spoName[i],picture[i],crown[i]);
             sponsors.add(sponsor_card);
 
