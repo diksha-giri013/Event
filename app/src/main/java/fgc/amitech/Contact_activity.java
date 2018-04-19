@@ -3,6 +3,7 @@ package fgc.amitech;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -16,14 +17,18 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.l4digital.fastscroll.FastScrollRecyclerView;
 
 import java.util.ArrayList;
 
 public class Contact_activity extends AppCompatActivity {
     private DrawerLayout mDrawerLayout;
-    private RecyclerView mRecyclerView;
+    private FastScrollRecyclerView mRecyclerView;
     //    private RecyclerView.Adapter mAdapter;
     //  private RecyclerView.LayoutManager mLayoutManager;
     private ArrayList<Contact> contacts = new ArrayList<Contact>();
@@ -32,8 +37,9 @@ public class Contact_activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_activity);
+
         mDrawerLayout = findViewById(R.id.drawer_layout);
-        mRecyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
+        mRecyclerView = findViewById(R.id.my_recycler_view);
         mRecyclerView.setHasFixedSize(true);
         // mLayoutManager = new LinearLayoutManager(this);
         contacts = Contact.createContactList();
@@ -43,7 +49,7 @@ public class Contact_activity extends AppCompatActivity {
         ContactsAdapter mAdapter = new ContactsAdapter(this,contacts);
         mRecyclerView.setAdapter(mAdapter);
         NavigationView navigationView = findViewById(R.id.nav_view);
-        navigationView.getMenu().getItem(2).setChecked(true);
+        navigationView.getMenu().getItem(4).setChecked(true);
         navigationView.setNavigationItemSelectedListener(
                 new NavigationView.OnNavigationItemSelectedListener() {
                     @Override
@@ -52,7 +58,9 @@ public class Contact_activity extends AppCompatActivity {
                         mDrawerLayout.closeDrawers();
                         switch (menuItem.getItemId()) {
                             case R.id.house:
-                                startActivity(new Intent(Contact_activity.this,MainActivity.class)); finish(); break;
+                                startActivity(new Intent(Contact_activity.this, MainActivity.class));
+                                finish();
+                                break;
                             //setContentView(R.layout.activity_dash);
 
                             case R.id.contact:
@@ -60,12 +68,15 @@ public class Contact_activity extends AppCompatActivity {
 
                                 break;
 
-                            case R.id.sponsor:// i=new Intent(MainActivity.this,SponsorActivity.class);
-                                startActivity(new Intent(Contact_activity.this,SponsorActivity.class)); finish(); break;
+                            case R.id.sponsor: startActivity(new Intent(Contact_activity.this,SponsorActivity.class)); finish();
+                                break;
 
-                            case R.id.events: //i=new Intent(MainActivity.this,EventActivity.class);
-                                startActivity(new Intent(Contact_activity.this,EventActivity.class)); finish(); break;
-                            case R.id.developer: startActivity(new Intent(Contact_activity.this,DeveloperActivity.class)); finish(); break;
+                            case R.id.events:  startActivity(new Intent(Contact_activity.this,EventActivity.class)); finish();//i=new Intent(MainActivity.this,EventActivity.class);
+                                break;
+                            case R.id.eventshe:  startActivity(new Intent(Contact_activity.this,EventSchedule.class)); finish();//i=new Intent(MainActivity.this,EventActivity.class);
+                                break;
+
+                            case R.id.developer:startActivity(new Intent(Contact_activity.this,DeveloperActivity.class)); finish();  break;
 
 
                         }
@@ -74,7 +85,7 @@ public class Contact_activity extends AppCompatActivity {
                     }
                 });
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         ActionBar actionbar = getSupportActionBar();
         actionbar.setDisplayHomeAsUpEnabled(true);
@@ -105,12 +116,17 @@ public class Contact_activity extends AppCompatActivity {
             public TextView mTextView1;
             public TextView mTextView2;
             public ImageView mImageView;
+            public Button callButton;
+            public Button whatsapp;
             private Context context;
+
             public ViewHolder(Context context,View v) {
                 super(v);
-                mTextView1 = v.findViewById(R.id.textView0);
-                mTextView2 = v.findViewById(R.id.textView1);
+                mTextView1 = v.findViewById(R.id.designation);
+                mTextView2 = v.findViewById(R.id.name);
                 mImageView = v.findViewById(R.id.imageView);
+                callButton = v.findViewById(R.id.callIcon);
+                whatsapp = v.findViewById(R.id.whappIcon);
                 this.context = context;
             }
         }
@@ -133,19 +149,45 @@ public class Contact_activity extends AppCompatActivity {
         }
 
         @Override
-        public void onBindViewHolder(ContactsAdapter.ViewHolder holder, int position) {
-            Contact contact=mContacts.get(position);
+        public void onBindViewHolder(ContactsAdapter.ViewHolder holder, final int position) {
+            final Contact contact=mContacts.get(position);
             TextView textView=holder.mTextView1;
             textView.setText(contact.getPost());
-
             TextView textView1=holder.mTextView2;
             textView1.setText(contact.getmName());
             ImageView imageView1=holder.mImageView;
             imageView1.setClipToOutline(true);
             imageView1.setImageResource(contact.getPic());
             if(position%2==0)
-            {holder.itemView.setBackgroundColor(Color.parseColor("#EEEEEE"));
+            {
+                holder.itemView.setBackgroundColor(Color.parseColor("#EEEEEE"));
             }
+
+            holder.callButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(position==24) ptoast();
+                    else {
+                        Uri uri = Uri.parse("tel:+91" + contact.getNumber());
+                        Intent callIntent = new Intent(Intent.ACTION_DIAL);
+                        callIntent.setData(uri);
+                        startActivity(callIntent);
+                    }
+                }
+            });
+
+            holder.whatsapp.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view)
+                {
+                    if(position==24) wtoast();
+                    else {
+                        Uri uri = Uri.parse("https://api.whatsapp.com/send?phone=+91" + contact.getNumber());
+                        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                        startActivity(intent);
+                    }
+                }
+            });
         }
 
         @Override
@@ -153,4 +195,14 @@ public class Contact_activity extends AppCompatActivity {
             return mContacts.size();
         }
     }
+
+    public void ptoast(){
+        Toast toast = Toast.makeText(this, "Phone no. not available", Toast.LENGTH_SHORT);
+        toast.show();
+    }
+    public void wtoast(){
+        Toast toast = Toast.makeText(this, "Whatsapp no. not available", Toast.LENGTH_SHORT);
+        toast.show();
+    }
+
 }

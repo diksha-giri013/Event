@@ -69,62 +69,43 @@ public class Sponsor {
                 "Power sponsor",
                 "Associate sponsor",
                 "Associate sponsor",
-                "Drinks partner",
-                "Desserts partner",
-                "Technology partner",
-                "Event sponsor",
-                "Clarity partner"
+                "Technology partner"
         };
         spoPost = new String[]{
-
-                "Vivo",
-                "ACE Academy",
-                "Kreatryx",
-                "Dena bank",
-                "Pepsi",
-                "Baskin Robbins",
-                "Feels Goods Creations",
-                "Worlds of wonder",
-                "Lenskart"
+                "Garniche",
+                "Developing Success Institute",
+                "Career Launcher",
+               "ACE Academy",
+                "Feels Goods Creations"
         };
         spoName = new String[]{
-                "Camera & Music",
+                "Chef at your Doorstep",
+                "One thing that matters to you and us, is your result and success",
+                "Helping the youth of the country achieve their career dreams",
                 "Engineering Academy",
-                "GATE/PSU/SSC Preparation Simplified",
-                "Dena hai toh Bharosa hai",
-                "",
-                "",
-                "Spreading happiness feels good",
-                "Place of wow moments",
-                "Spexy is the new sexy"
+                "Spreading happiness feels good"
+
         };
         picture=new int[]{
-                R.drawable.logo_vivo,
-                R.drawable.logo_ace_academy,
-                R.drawable.logo_kreatryx,
-                R.drawable.logo_dena_bank,
-                R.drawable.logo_pepsi,
-                R.drawable.logo_baskin_robbins,
-                R.drawable.logo_fgc,
-                R.drawable.logo_wow,
-                R.drawable.logo_lenskart
+                R.drawable.logotitle_new,
+                R.drawable.logo_devloping_success,
+                R.drawable.logo_career_launcher,
+                 R.drawable.logo_ace_academy,
+                R.drawable.fgc
         };
         crown=new int[]{
+
 
 
                 Color.parseColor("#FBC02D"),
                 Color.parseColor("#BDBDBD"),
                 Color.parseColor("#795548"),
-                Color.parseColor("#2E7D32"),
-                Color.parseColor("#FBC02D"),
-                Color.parseColor("#FBC02D"),
-                Color.parseColor("#FBC02D"),
-                Color.parseColor("#FBC02D"),
+                Color.parseColor("#795548"),
                 Color.parseColor("#FBC02D")
 
         };
 
-        for (int i = 0; i < 9; i++) {
+        for (int i = 0; i < 5; i++) {
             sponsor_card = new Sponsor(spoHead[i],spoPost[i], spoName[i],picture[i],crown[i]);
             sponsors.add(sponsor_card);
 

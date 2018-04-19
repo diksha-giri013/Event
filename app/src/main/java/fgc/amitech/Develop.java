@@ -16,16 +16,16 @@ public class Develop {
     //  private int mwhtsapp;
     //  private int mcall;
 
-    public Develop( String post,int pic) {
-       // mhead = head;
+    public Develop( String head, String post,int pic) {
+       mhead = head;
         mpost = post;
         mpic = pic;
         //   mwhtsapp = whtsapp;
         //mcall = call;
     }
-   // public String getHead() {
-   //     return mhead;
-   // }
+    public String getHead() {
+       return mhead;
+    }
     public String getPost() {
         return mpost;
     }
@@ -50,36 +50,46 @@ public class Develop {
         // int whatsapp;
         // int call;
         ArrayList<Develop> develops=new ArrayList<Develop>();
-       /* spoHead = new String[]{
+       spoHead = new String[]{
                 "Developer",
                 "Developer",
-                "Developer",
-                "Developer",
-                "Developer",
-                "Developer"
-        };*/
+                "Manager",
+                "Associate Developer",
+                "Associate Developer",
+               "Associate Developer",
+                "Head Coordinator",
+               "Coordinator",
+               "Coordinator"
+        };
         spoPost = new String[]{
 
-                "Payal joshi\nDeveloper",
-                "Diksha giri\nDeveloper",
-                //"UrbanClap\nDeveloper",
-                //"Coca Cola\nDeveloper",
-                //"random\nDeveloper",
+                "Payal joshi",
+                "Diksha giri",
+                "Utsav Talwar",
+                "Aayush",
+                "Chaitanya",
+                "Avinash",
+                "Mukul",
+                "Kunal",
+                "Akarshit"
                 //"wow\nDeveloper"
         };
 
         picture=new int[]{
                 R.drawable.dev_payal,
-                //R.drawable.snowy,
-                //R.drawable.snowy,
-                //R.drawable.snowy,
-                //R.drawable.snowy,
-                R.drawable.dev_diksha
+                R.drawable.dev_diksha,
+                R.drawable.app_utsav,
+                R.drawable.app_aayush,
+                R.drawable.app_chaitanya,
+                R.drawable.app_avinash,
+                R.drawable.app_mukul,
+                R.drawable.app_kunal,
+                R.drawable.app_akarshit
         };
 
 
         for (int i = 0; i < picture.length; i++) {
-            sponsor_card = new Develop(spoPost[i],picture[i]);
+            sponsor_card = new Develop(spoHead[i],spoPost[i],picture[i]);
             develops.add(sponsor_card);
 
         }

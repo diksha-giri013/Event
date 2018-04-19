@@ -24,36 +24,43 @@
     <TextView
         android:id="@+id/textView0"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="34dp"
         android:layout_above="@+id/imageView"
         android:layout_alignBottom="@+id/imageView"
         android:layout_alignEnd="@+id/imageView"
+        android:layout_marginBottom="27dp"
+        android:layout_marginRight="4dp"
         android:background="#bf00894e"
         android:elevation="8dp"
         android:fontFamily="sans-serif-smallcaps"
+        android:padding="5dp"
         android:text="@string/dev_post"
         android:textAllCaps="true"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:textColor="#ffffff"
-        android:layout_marginRight="4dp"
-        android:layout_marginBottom="4dp"
-        android:padding="5dp"/>
+        android:textColor="#ffffff" />
 
 
-    <!--<TextView
+    <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView0"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/textView0"
+        android:layout_alignEnd="@+id/imageView"
+        android:layout_marginTop="-27dp"
         android:fontFamily="@font/oxygen"
-        android:layout_marginTop="3dp"
         android:text="developer"
+        android:paddingEnd="5dp"
+        android:layout_marginEnd="4dp"
+        android:background="#bf00894e"
         android:textAllCaps="true"
+        android:elevation="8dp"
+        android:textAlignment="textEnd"
+        android:layout_marginStart="14dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
-        android:textColor="#616161" />-->
+        android:textColor="#fff" />
 
-    />
+
 
 
 </RelativeLayout>

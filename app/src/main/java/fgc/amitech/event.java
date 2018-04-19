@@ -7,6 +7,7 @@ import java.util.ArrayList;
  */
 
 public class event {
+
     private String mhead;
 
     public event(String head)
@@ -16,6 +17,7 @@ public class event {
     public String getHead() {
         return mhead;
     }
+
     public static ArrayList<event> showEvent(){
         event event_card;
         String[] spoHead;
@@ -44,10 +46,11 @@ public class event {
                 "Rumble Jumble",
                 "You Me Mad"
         };
-        for (int i = 0; i < 21; i++) {
+        for (int i = 0; i < spoHead.length; i++) {
             event_card = new event(spoHead[i]);
             events.add(event_card);
 
         }
         return events;
-}}
+    }
+}

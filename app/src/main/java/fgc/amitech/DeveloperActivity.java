@@ -42,12 +42,13 @@ public class DeveloperActivity extends AppCompatActivity {
         DeveloperAdapter mAdapter = new DeveloperAdapter(this,develops);
         mRecyclerView.setAdapter(mAdapter);
         NavigationView navigationView = findViewById(R.id.nav_view);
-        navigationView.getMenu().getItem(4).setChecked(true);
+       navigationView.getMenu().getItem(5).setChecked(true);
+
         navigationView.setNavigationItemSelectedListener(
                 new NavigationView.OnNavigationItemSelectedListener() {
                     @Override
                     public boolean onNavigationItemSelected(MenuItem menuItem) {
-                        // menuItem.setChecked(true);
+
                         mDrawerLayout.closeDrawers();
                         switch (menuItem.getItemId()) {
                             case R.id.house:
@@ -58,14 +59,14 @@ public class DeveloperActivity extends AppCompatActivity {
                             // i=new Intent(MainActivity.this,Contact_activity.class);
                             case R.id.sponsor:// i=new Intent(MainActivity.this,SponsorActivity.class);
                                 startActivity(new Intent(DeveloperActivity.this,SponsorActivity.class)); finish(); break;
-
+                            case R.id.eventshe: startActivity(new Intent(DeveloperActivity.this,EventSchedule.class)); finish();break;
                             case R.id.events: //i=new Intent(MainActivity.this,EventActivity.class);
                                 startActivity(new Intent(DeveloperActivity.this,EventActivity.class)); finish(); break;
                             case R.id.developer: break;
 
 
                         }
-
+                        menuItem.setChecked(true);
                         return true;
                     }
                 });
@@ -103,8 +104,8 @@ public class DeveloperActivity extends AppCompatActivity {
             private Context context;
             public ViewHolder(Context context,View v) {
                 super(v);
-               // mTextView0 = v.findViewById(R.id.textView1);
-                mTextView1 = v.findViewById(R.id.textView0);
+               mTextView0 = v.findViewById(R.id.textView0);
+                mTextView1 = v.findViewById(R.id.textView1);
                 mImageView = v.findViewById(R.id.imageView);
                 this.context = context;
             }
@@ -130,10 +131,11 @@ public class DeveloperActivity extends AppCompatActivity {
         @Override
         public void onBindViewHolder(DeveloperAdapter.ViewHolder holder, int position) {
             Develop sponsor=mSponsors.get(position);
-           // TextView textView0=holder.mTextView0;
-          //  textView0.setText(sponsor.getHead());
-            TextView textView=holder.mTextView1;
+            TextView textView0=holder.mTextView1;
+            textView0.setText(sponsor.getHead());
+            TextView textView=holder.mTextView0;
             textView.setText(sponsor.getPost());
+
           // for(int i=0; i<sponsor.getPost().length();i++)
          //  {
           //  {
@@ -154,7 +156,10 @@ public class DeveloperActivity extends AppCompatActivity {
             //imageView1.setPadding(20,20,20,20);
             //imageView1.setClipBounds(2,2,2,2);
             imageView1.setImageResource(sponsor.getPic());
-
+            if(position>1)
+            {//imageView1.setBackground(null);
+                imageView1.setBackgroundColor(Color.parseColor("#ffffff"));
+            }
             // imageView2.setTint(sponsor.getCrown());
             //  imageView2.setColorFilter(getResources().getC);
             //  DrawableCompat.setTint(imageView2.getDrawable(),sponsor.getCrown());

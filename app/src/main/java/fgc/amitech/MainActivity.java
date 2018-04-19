@@ -107,27 +107,28 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         mDrawerLayout = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.getMenu().getItem(0).setChecked(true);
+       // navigationView.setCheckedItem(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(
                 new NavigationView.OnNavigationItemSelectedListener() {
                     @Override
                     public boolean onNavigationItemSelected(MenuItem menuItem) {
                         // set item as selected to persist highlight
                         //  Fragment fragment = null;
-                        //  menuItem.setChecked(true);
+
 
                         // close drawer when item is tapped
                         //    mDrawerLayout.closeDrawers();
                         switch (menuItem.getItemId()) {
                             case R.id.house:
-                                startActivity(new Intent(MainActivity.this,MainActivity.class));  break;
+                                 break;
                             //setContentView(R.layout.activity_dash);
 
                             case R.id.contact:
                                 // i=new Intent(MainActivity.this,Contact_activity.class);
-                                //startActivity(new Intent(MainActivity.this,Contact_activity.class));  break;
-                                Snackbar snackbar = Snackbar.make(findViewById(R.id.dash_rv_catlist),R.string.snack,Snackbar.LENGTH_SHORT);
-                                snackbar.show();
-                                break;
+                                startActivity(new Intent(MainActivity.this,Contact_activity.class)); finish(); break;
+                                //Snackbar snackbar = Snackbar.make(findViewById(R.id.dash_rv_catlist),R.string.snack,Snackbar.LENGTH_SHORT);
+                              //  snackbar.show();
+
                             //Fragment fragment = new ContactActivity();
                             // fragmentTransaction.add(R.id.mainArea, fragment);
                             // fragmentTransaction.commit();break;
@@ -135,13 +136,15 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                             //  startActivity(i); finish(); break;
 
                             case R.id.sponsor:// i=new Intent(MainActivity.this,SponsorActivity.class);
-                                startActivity(new Intent(MainActivity.this,SponsorActivity.class));  break;
+                                startActivity(new Intent(MainActivity.this,SponsorActivity.class)); finish(); break;
 
                             case R.id.events: //i=new Intent(MainActivity.this,EventActivity.class);
                                 startActivity(new Intent(MainActivity.this,EventActivity.class));  break;
                             case R.id.developer: //i=new Intent(MainActivity.this,EventActivity.class);
                                 startActivity(new Intent(MainActivity.this,DeveloperActivity.class));  break;
                             //    newGame();
+                            case R.id.eventshe:  startActivity(new Intent(MainActivity.this, EventSchedule.class));finish();break;
+
                             //   return true;
                             //default:
                             //  menuItem.setChecked(true);
@@ -155,8 +158,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                             // mDrawerLayout.closeDrawers();
                             //  }
                         }
-                        menuItem.setChecked(true);
+
                         mDrawerLayout.closeDrawers();
+                        menuItem.setChecked(true);
                         // Add code here to update the UI based on the item selected
                         // For example, swap UI fragments here*/
                         //  displaySelectedScreen(menuItem.getItemId());

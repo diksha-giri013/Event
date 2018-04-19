@@ -66,7 +66,7 @@ public class SponsorActivity extends AppCompatActivity {
                             case R.id.events: //i=new Intent(MainActivity.this,EventActivity.class);
                                 startActivity(new Intent(SponsorActivity.this,EventActivity.class)); finish(); break;
                             case R.id.developer: startActivity(new Intent(SponsorActivity.this,DeveloperActivity.class)); finish(); break;
-
+                            case R.id.eventshe: startActivity(new Intent(SponsorActivity.this,EventSchedule.class)); finish();break;
                         }
 
                         return true;
