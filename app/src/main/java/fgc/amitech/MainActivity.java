@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
                                 //startActivity(new Intent(MainActivity.this,EventActivity.class));  break;
                             case R.id.developer: //i=new Intent(MainActivity.this,EventActivity.class);
-                                startActivity(new Intent(MainActivity.this,DeveloperActivity.class));  break;
+                                startActivity(new Intent(MainActivity.this,DeveloperActivity.class));  finish(); break;
                             //    newGame();
                             case R.id.eventshe:  startActivity(new Intent(MainActivity.this, EventSchedule.class));finish();break;
 
@@ -274,14 +274,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
-        // String item=adapterView.getItemAtPosition(i).toString();
+        //String item=adapterView.getItemAtPosition(i).toString();
         switch(adapterView.getSelectedItemPosition()) {
             case 0: break;
-            //case 1: startActivity(new Intent(MainActivity.this, EventActivity.class));
-                 //break;
+            case 1: startActivity(new Intent(MainActivity.this, EventActivity.class));finish();
+                 break;
             case 2:
-                //startActivity(new Intent(MainActivity.this, Contact_activity.class));
-               //break;
+                startActivity(new Intent(MainActivity.this, Contact_activity.class));finish();
+               break;
         }
         ((TextView) view).setTextColor(Color.WHITE);
         ((TextView) view).setTextSize(20);
