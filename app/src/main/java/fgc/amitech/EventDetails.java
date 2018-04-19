@@ -228,22 +228,25 @@ public class EventDetails {
 
         title = new String[]{
                 //BEST OF AMITECH
+                "Cook Without Fire",
+                "Haste Raho",
                 "Technovation",
                 "Pixel Jones",
-                "Allegro",
                 "JAM Session",
-                "Stepping Up"
+                "Natraj"
                 };
 
         desc = new String[]{
-                "I3DEA. Witness the rise of disruptive dreams in this unique pitching event as a part of TDC 2018!",
-                "Visualise the unavowed. An event to showcase your digital expertise skills.",
-                "A melodious voice is pleasing, a melodious harmony is spell binding. ",
+                "Food is life, cooking is fun. Young learners tried their hand in doing just that WITHOUT fire! An event brought to you by Garniche.",
+                "Fodder for your funny bone from some of the best comedians and artists. Special appearance from Canvas Laugh Club peeps for you!",
+                "I3DEA. Witness the rise of disruptive dreams in this startup event",
+                "VIdualize the unavowed. An event to showcase your digital art expertise!",
                 "Let Your Hair Down and loose yourself in the elated atmosphere !",
-                "Showcase your talent and take your passion to the next level. Win prizes worth 2000!"
+                "A solo dance competition to leave you awestruck"
         };
 
         cat = new String[]{
+                "BEST OF AMITECH",
                 "BEST OF AMITECH",
                 "BEST OF AMITECH",
                 "BEST OF AMITECH",
@@ -252,10 +255,11 @@ public class EventDetails {
          };
 
         teamsize = new String[]{
+                "Individual Participation",
+                "Individual Participation",
                 "2-5 Members",
                 "1-3 Members",
-                "2-5 Members",
-                "Free For All Event",
+                "Free for all event",
                 "Individual Participation"
         };
 
@@ -263,21 +267,25 @@ public class EventDetails {
                 "Rules are very important for any event read them. \nEach member can present one argument.",
                 "Rules are very important for any event read them. \nEach member can present one argument.",
                 "Rules are very important for any event read them. \nEach member can present one argument.Rules are very important for any event read them. \nEach member can present one argument.",
+                "Rules are very important for any event read them. \nEach member can present one argument.Rules are very important for any event read them. \nEach member can present one argument.",
+                "Rules are very important for any event read them. \nEach member can present one argument.Rules are very important for any event read them. \nEach member can present one argument.",
                 "Rules are very important for any event read them. \nEach member can present one argument."
         };
 
         date = new String[]{
                 "21 April 2018",
                 "21 April 2018",
+                "22 April 2018",
                 "21 April 2018",
                 "21-22 April 2018",
                 "22 April 2018"
         };
 
         loc = new String[]{
-                "Moot Court",
                 "Classroom 1",
                 "Moot Court",
+                "Moot Court",
+                "Classroom 1",
                 "Moot Court",
                 "Moot Court"
         };
@@ -287,14 +295,16 @@ public class EventDetails {
                 2,
                 3,
                 4,
-                5
+                5,
+                6
         };
         image = new int[]{
-                R.drawable.event_img5,
-                R.drawable.event_img6,
+                R.drawable.pic_8,
+                R.drawable.pic_2,
+                R.drawable.pic_15,
+                R.drawable.pic_5,
                 R.drawable.event_img1,
-                R.drawable.event_img2,
-                R.drawable.event_img6
+                R.drawable.pic_14
         };
 
         for (int i = 0; i < pos.length; i++) {
@@ -320,7 +330,6 @@ public class EventDetails {
 
         title = new String[]{
                 "Cook Without Fire",
-                "Let's Bounce",
                 "JAM Session",
                 "Metal Strength",
                 "Mate In Two",
@@ -328,16 +337,14 @@ public class EventDetails {
         };
 
         desc = new String[]{
-                "Food is life, cooking is fun. Young learners tried their hand in doing just that WITHOUT fire! ",
-                "Chill out and test your balance in this event featuring Zorbin ",
+                "Food is life, cooking is fun. Young learners tried their hand in doing just that WITHOUT fire! An event brought to you by Garniche.",
                 "Let Your Hair Down and loose yourself in the elated atmosphere ! ",
                 "Put your strength to test in this push up event",
                 "Defeat your opponent with the given chess setup in two moves.",
-                "How good are you with your aim? Find out in this dar game. "
+                "How good are you with your aim? Find out in this dart game. "
         };
 
         cat = new String[]{
-                "FUN",
                 "FUN",
                 "FUN",
                 "FUN",
@@ -347,7 +354,6 @@ public class EventDetails {
 
         teamsize = new String[]{
                 "Individual Participation",
-                "Individual Participation",
                 "Free For All Event",
                 "Individual Participation",
                 "Individual Participation",
@@ -356,7 +362,7 @@ public class EventDetails {
 
         rule = new String[]{
                 "Rules are very important for any event read them. \n The rules for this event are coming soon.",
-                "Rules are very important for any event read them. \n The rules for this event are coming soon.",
+
                 "Rules are very important for any event read them. \n The rules for this event are coming soon.",
                 "Rules are very important for any event read them. \n The rules for this event are coming soon.",
                 "Rules are very important for any event read them. \n The rules for this event are coming soon.",
@@ -365,7 +371,6 @@ public class EventDetails {
 
         date = new String[]{
                 "21 April 2018",
-                "22 April 2018",
                 "21-22 April 2018",
                 "21-22 April 2018",
                 "21-22 April 2018",
@@ -374,7 +379,6 @@ public class EventDetails {
 
         loc = new String[]{
                 "Classroom 1",
-                "Classroom 3",
                 "Moot Court",
                 "Lobby",
                 "Lobby",
@@ -386,15 +390,14 @@ public class EventDetails {
                 2,
                 3,
                 4,
-                5,
-                6
+                5
+
         };
         image = new int[]{
-                R.drawable.event_img3,
-                R.drawable.event_img4,
-                R.drawable.event_img5,
-                R.drawable.event_img4,
-                R.drawable.event_img3,
+                R.drawable.pic_8,
+                R.drawable.event_img1,
+                R.drawable.pic_13,
+                R.drawable.pic_20,
                 R.drawable.event_img4
 
         };
@@ -425,45 +428,43 @@ public class EventDetails {
                 "Alaap",
                 "Haste Raho",
                 "Serenade",
-                "Allegro",
                 "Bhaavnayein",
                 "Natraj",
-                "Stepping Up"
+                "Duet Dance"
         };
 
         desc = new String[]{
                 "Witness the mastery of musical notes in this Solo Indian singing event by Decibel. ",
-                "Fodder for your funny bone from some of the best comedians and artists. ",
+                "Fodder for your funny bone from some of the best comedians and artists. Special appearance from Canvas Laugh Club peeps for you!",
                 "Witness the mastery of musical notes in this Solo Western singing event by Decibel.",
-                "A melodious voice is pleasing, a melodious harmony is spell binding.",
-                "Showcase your talent and take your passion to the next level. Win prizes worth 2000!",
-                "Showcase your talent and take your passion to the next level. Win prizes worth 2000!",
-                "Showcase your talent and take your passion to the next level. Win prizes worth 2000!"
+
+                "Talented individuals showcase their mono act presentations",
+                "A solo dance event to leave you awestruck",
+                "When Dance meets Chemistry"
         };
 
         cat = new String[]{
                 "CULTURAL",
                 "CULTURAL",
                 "CULTURAL",
-                "CULTURAL",
+
                 "CULTURAL",
                 "CULTURAL",
                 "CULTURAL"
         };
 
         teamsize = new String[]{
-                "",
+                "1+3 members",
                 "Individual Participation",
-                "",
-                "",
+                "1+3 members",
                 "Individual Participation",
                 "Individual Participation",
-                ""
+                "2 members"
         };
 
         rule = new String[]{
                 "Rules are very important for any event read them. \n The rules for this event are coming soon.",
-                "Rules are very important for any event read them. \n The rules for this event are coming soon.",
+
                 "Rules are very important for any event read them. \n The rules for this event are coming soon.",
                 "Rules are very important for any event read them. \n The rules for this event are coming soon.",
                 "Rules are very important for any event read them. \n The rules for this event are coming soon.",
@@ -476,7 +477,7 @@ public class EventDetails {
                 "21 April 2018",
                 "21 April 2018",
                 "21 April 2018",
-                "21 April 2018",
+
                 "22 April 2018",
                 "22 April 2018",
         };
@@ -485,7 +486,7 @@ public class EventDetails {
                 "Moot Court",
                 "Moot Court",
                 "Moot Court",
-                "Moot Court",
+
                 "Classroom 1",
                 "Moot Court",
                 "Moot Court"
@@ -498,17 +499,16 @@ public class EventDetails {
                 3,
                 4,
                 5,
-                6,
-                7
+                6
+
         };
         image = new int[]{
-                R.drawable.event_img1,
-                R.drawable.event_img2,
-                R.drawable.event_img3,
-                R.drawable.event_img4,
-                R.drawable.event_img1,
-                R.drawable.event_img2,
-                R.drawable.event_img3
+                R.drawable.pic_1,
+                R.drawable.pic_2,
+                R.drawable.pic_3,
+                R.drawable.pic_10,
+                R.drawable.pic_14,
+                R.drawable.pic_16
         };
 
         for (int i = 0; i < pos.length; i++) {
@@ -534,13 +534,13 @@ public class EventDetails {
 
         title = new String[]{
 
-                "Guess Who?",
-                "Star Night"
+                "Cook Without Fire",
+                "Haste raho"
                };
 
         desc = new String[]{
-                "Showcase your talent and take your passion to the next level. Win prizes worth 5000!",
-                "Showcase your talent and take your passion to the next level. Win prizes worth 5000!"
+                "Food is life, cooking is fun. Young learners tried their hand in doing just that WITHOUT fire! An event brought to you by Garniche.",
+                "Fodder for your funny bone from some of the best comedians and artists. Special appearance from Canvas Laugh Club peeps for you!"
         };
 
         cat = new String[]{
@@ -549,8 +549,8 @@ public class EventDetails {
         };
 
         teamsize = new String[]{
-                "6-10 Members",
-                "3-8 Members"
+                "Individual Participation",
+                "Individual Participation"
         };
 
         rule = new String[]{
@@ -559,13 +559,13 @@ public class EventDetails {
         };
 
         date = new String[]{
-                "25 April 2018",
-                "26 April 2018"
+                "21 April 2018",
+                "21 April 2018"
         };
 
         loc = new String[]{
-                "Hall-2B",
-                "Main Stage"
+                "Classroom 1",
+                "Moot Court"
         };
 
         pos = new int[]{
@@ -575,8 +575,8 @@ public class EventDetails {
         };
 
         image = new int[]{
-                R.drawable.event_img2,
-                R.drawable.event_img3
+                R.drawable.pic_8,
+                R.drawable.pic_2
         };
 
         for (int i = 0; i < pos.length; i++) {
@@ -610,7 +610,7 @@ public class EventDetails {
         };
 
         desc = new String[]{
-                "Visualise the unavowed. An event to showcase your digital expertise skills.",
+                "Visualise the unavowed. An event to showcase your digital art expertise.",
                 "Showcase your talent and take your passion to the next level. Win prizes worth 5000!",
                 "A quiz by SAE.",
                 "I3DEA. Witness the rise of disruptive dreams in this unique pitching event! ",
@@ -667,11 +667,11 @@ public class EventDetails {
         };
 
         image = new int[]{
-                R.drawable.event_img2,
-                R.drawable.event_img3,
-                R.drawable.event_img4,
-                R.drawable.event_img2,
-                R.drawable.event_img5
+                R.drawable.pic_5,
+                R.drawable.pic_19,
+                R.drawable.pic_6,
+                R.drawable.pic_15,
+                R.drawable.pic_18
         };
 
         for (int i = 0; i < pos.length; i++) {
@@ -738,8 +738,8 @@ public class EventDetails {
         };
 
         image = new int[]{
-                R.drawable.event_img2,
-                R.drawable.event_img3
+                R.drawable.pic_9,
+                R.drawable.pic_11
         };
 
         for (int i = 0; i < pos.length; i++) {

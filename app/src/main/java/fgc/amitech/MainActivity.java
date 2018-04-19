@@ -6,7 +6,6 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
@@ -40,6 +39,7 @@ import static fgc.amitech.EventDetails.makeCultData;
 import static fgc.amitech.EventDetails.makeEventData;
 import static fgc.amitech.EventDetails.makeFunData;
 import static fgc.amitech.EventDetails.makeLitData;
+import static fgc.amitech.EventDetails.makeSponData;
 import static fgc.amitech.EventDetails.makeTechData;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
@@ -218,9 +218,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             case "CULTURAL":
                 eventCard = makeCultData();
                 break;
-            //case "SPONSORED":
-                //eventCard = makeSponData();
-                //break;
+            case "SPONSORED":
+                eventCard = makeSponData();
+                break;
             case "LITERARY":
                 eventCard = makeLitData();
                 break;
@@ -531,9 +531,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     case "CULTURAL":
                         eventCard = makeCultData();
                         break;
-                    //case "SPONSORED":
-                        //eventCard = makeSponData();
-                        //break;
+                    case "SPONSORED":
+                        eventCard = makeSponData();
+                        break;
                     case "LITERARY":
                         eventCard = makeLitData();
                         break;

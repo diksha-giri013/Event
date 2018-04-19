@@ -15,7 +15,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:scaleType="centerCrop"
-            app:srcCompat="@drawable/event_img1" />
+            app:srcCompat="@drawable/pic_20" />
 
         <ImageView
             android:id="@+id/detail_iv_gradient"
@@ -70,6 +70,7 @@
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="@dimen/fab_margin"
             android:text="REGISTER"
+            android:visibility="invisible"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="@dimen/btn_text" />
     </RelativeLayout>
@@ -123,6 +124,7 @@
             android:layout_marginTop="@dimen/section_top_margin"
             android:fontFamily="@font/oxygen_bold"
             android:text="Guidelines"
+            android:visibility="invisible"
             android:textSize="@dimen/subhead" />
 
         <TextView
@@ -133,6 +135,7 @@
             android:layout_below="@+id/detail_tv_guideline"
             android:layout_marginStart="4dp"
             android:layout_marginTop="2dp"
+            android:visibility="invisible"
             android:fontFamily="@font/oxygen_light"
             android:text="@string/event_rules"
             android:textSize="@dimen/paragraph" />
